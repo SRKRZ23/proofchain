@@ -1,0 +1,994 @@
+{
+  "metadata": {
+    "demo_purpose": "Demonstrate 32+ packet evidence chain integrity",
+    "questions_seeded": 8,
+    "total_packets": 32,
+    "chain_verifies": true,
+    "verify_key_public_hex": "d58ae79f8b7ef95b7cfcc6a71bed74ac225bdbc2df48b466823b7208240076dd",
+    "signing_algorithm": "Ed25519",
+    "hash_algorithm": "SHA-256",
+    "canonicalization": "JCS-like (sorted keys, minimal whitespace)"
+  },
+  "chain": {
+    "verify_key": "d58ae79f8b7ef95b7cfcc6a71bed74ac225bdbc2df48b466823b7208240076dd",
+    "chain_length": 32,
+    "chain_valid": true,
+    "records": [
+      {
+        "seq": 0,
+        "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "record_hash": "f24a574dccd70b51b9dd337896f0aeb5679ccfa3d8aed810432c10f5de07875d",
+        "signature": "ff453d65245e033b90df1be07abad715ce11e2034bffd464cbb1dc16c288839d8ffb2617044b9d431a4455c912613565eb8d86e0356e25d80a63b00a4c5d3401",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_b0b7428b2e82",
+          "question_hash": "de28165ab125e9e3b2da814a0f33f46e4de8ff5f99413edcf0a3c1ffbe9dc4ab",
+          "persona": "equity_analyst",
+          "ts": 1780165105.96911
+        }
+      },
+      {
+        "seq": 1,
+        "prev_hash": "f24a574dccd70b51b9dd337896f0aeb5679ccfa3d8aed810432c10f5de07875d",
+        "record_hash": "cacdef113d524020d8acc39e32436bb740e942a9be478e4faf19eb5eb66c5c59",
+        "signature": "41c65fbd4823bc4d6a145055667e9dd6b6d74816f8e31de5904ce861308561f87a7f2593dfd23b5ec3224edd1470f984d558ceeed67c47fc8735eb54014b660e",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_b0b7428b2e82",
+          "query_hash": "de28165ab125e9e3b2da814a0f33f46e4de8ff5f99413edcf0a3c1ffbe9dc4ab",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.969321
+        }
+      },
+      {
+        "seq": 2,
+        "prev_hash": "cacdef113d524020d8acc39e32436bb740e942a9be478e4faf19eb5eb66c5c59",
+        "record_hash": "77dcd8e6e574abb162b56aecaa8127455a079dde9d39470a599630df5a856bfb",
+        "signature": "40e6f6a5f926ba80843d25cf9b5abca027408b84dbc9a2add25136e3b14385b06d642a131c279e304940e8f8ed271bfabd0b2e2e2e300002c8c39cf3c92b8008",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_b0b7428b2e82",
+          "topic": "placeholder_topic",
+          "source_a_hash": "d998e37f17710ab3ebff24ed1a846da8d0f8d520575de263a55809c8575bfe89",
+          "source_b_hash": "7f691e2b71f7cc67cef0a732056eef2d19bd7d5801184003b8833e7b8f20802d",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.9694898
+        }
+      },
+      {
+        "seq": 3,
+        "prev_hash": "77dcd8e6e574abb162b56aecaa8127455a079dde9d39470a599630df5a856bfb",
+        "record_hash": "1bdd37400c5b58321275d3f90a1aae163b20cd963dfc111b781c6e8110cf0769",
+        "signature": "9fa76d0db1770a2d1b4a423821ac5f2f256083291f018159ec0d2da1c5d3db1e626e8564713a44307503ab61fb429ef38c0a8218644fe55c3d96c3dae6dd2605",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_b0b7428b2e82",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "84c5281802eb266ea866c308e993f7e75c2992ec115f2499e306434c701ea229",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.57,
+          "ts": 1780165105.969663
+        }
+      },
+      {
+        "seq": 4,
+        "prev_hash": "1bdd37400c5b58321275d3f90a1aae163b20cd963dfc111b781c6e8110cf0769",
+        "record_hash": "c6283cb3b765cbb455666bf98d607fcde1de5c145e5cd25fe13c05af6736c5a6",
+        "signature": "1b649c869cd9603616e451cb3843257c48ea5ca2bc97f9629e00081ab75a3f80adf646e66083e845b0a40e40d85bfa40c279fd1ba05f2aef91e8937f7587e806",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_6a420407fe42",
+          "question_hash": "637243e4a3ae986cdb3fca77b85937b2fd14b77d767c2a67f30ed0a6646b1812",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9698298
+        }
+      },
+      {
+        "seq": 5,
+        "prev_hash": "c6283cb3b765cbb455666bf98d607fcde1de5c145e5cd25fe13c05af6736c5a6",
+        "record_hash": "4c1318226e60a925a89537ec5daa915a5a79b3b3850de93455577142b0906cf8",
+        "signature": "66a3f5458c35ea861f996a04e29182fff11ca1acfe7072de0d55101dd505705c41601955ccc3c99a6d121e59af4c20c92d31874b82775b254566c6a6c54e6304",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_6a420407fe42",
+          "query_hash": "637243e4a3ae986cdb3fca77b85937b2fd14b77d767c2a67f30ed0a6646b1812",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.970005
+        }
+      },
+      {
+        "seq": 6,
+        "prev_hash": "4c1318226e60a925a89537ec5daa915a5a79b3b3850de93455577142b0906cf8",
+        "record_hash": "5560c4ef3a150f184009f792813622fd84665ba62fdcac8c810b6557dbc5530d",
+        "signature": "d5c3f1b32b9ae370b1f32bf128a8121d1ee706f9f4c307e54aee0899c3395714631ef7844ff55d54abd581d6e06b68717cb91b8a51935a81c2a054cbe2462a02",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_6a420407fe42",
+          "topic": "placeholder_topic",
+          "source_a_hash": "336b8faa9448a88140018587b70adbde4a1d6849067c8824c55d5dcbecf5dbb2",
+          "source_b_hash": "7854df2dd10b98885d8f1da1c505dd1a11a5256af46da28861912732e5d789e2",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.970183
+        }
+      },
+      {
+        "seq": 7,
+        "prev_hash": "5560c4ef3a150f184009f792813622fd84665ba62fdcac8c810b6557dbc5530d",
+        "record_hash": "ae9a421ca696f859771317551a0bd9dff65e1cee2b7f33d490b8e97f9fce0a58",
+        "signature": "9851b692372a00e24241552a63ab0c155c2c191d6643dff7a044afb3f8de4f0dbcd18697367b9e667f83d79b3be345da5a0d5ac4c4c77a68bb3ecf0cd2b36b05",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_6a420407fe42",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "6aab0358bcd2a895055366c5a009334255d59204a90948ae1d308ce9fd598c2f",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.53,
+          "ts": 1780165105.9703581
+        }
+      },
+      {
+        "seq": 8,
+        "prev_hash": "ae9a421ca696f859771317551a0bd9dff65e1cee2b7f33d490b8e97f9fce0a58",
+        "record_hash": "96517cd9ac09b9ec6d6a0abfaf28663865e33998e7680e2f455e90fd6d1953e6",
+        "signature": "d83acce9603efa09b31f30cb0df34d79cf9967ea16432417386508692aeb6e322bf12057c5d5d4d576ae59acdf3e4f6fc95249149d35586d48ce05f9a6328e01",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_8b2d23ef6002",
+          "question_hash": "fc3baf2137b26d9cf920bc4f8a7b38ac23ee3808bbceefec4316653a3f694974",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9705331
+        }
+      },
+      {
+        "seq": 9,
+        "prev_hash": "96517cd9ac09b9ec6d6a0abfaf28663865e33998e7680e2f455e90fd6d1953e6",
+        "record_hash": "7cb04ce8fdefaa67fa6f5d489739d5552e9a50bb26a131db5d7cd0560bfb2e44",
+        "signature": "933a2a2c963b6958d46cbbe5a417a7ec55a6b2ba89346483b064de91194c3cc180fd5a56ff4df5d47b9013fca95406123cddee7d5e299651f96fbfd01d478505",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_8b2d23ef6002",
+          "query_hash": "fc3baf2137b26d9cf920bc4f8a7b38ac23ee3808bbceefec4316653a3f694974",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.9707038
+        }
+      },
+      {
+        "seq": 10,
+        "prev_hash": "7cb04ce8fdefaa67fa6f5d489739d5552e9a50bb26a131db5d7cd0560bfb2e44",
+        "record_hash": "a77429cdca9e2f5cba20b75534fdc73ec262544e114be4331a718f2b5a095183",
+        "signature": "7689a464e61f5edeab9398978b3abbeaa898cce48b15dda189d8a295291dbd3580cf1391ffafc66756f645847a299350bdd503dddd7bd2c4b91c5d160a249709",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_8b2d23ef6002",
+          "topic": "placeholder_topic",
+          "source_a_hash": "2f464b7e6d4e6561ed7e191223e524f91f232bcc407b51991bc2d264a3e1685f",
+          "source_b_hash": "641d068b95ef2dd77044a26048a73c4e5168e05da48ce7fe81a7436b423bf99b",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.970858
+        }
+      },
+      {
+        "seq": 11,
+        "prev_hash": "a77429cdca9e2f5cba20b75534fdc73ec262544e114be4331a718f2b5a095183",
+        "record_hash": "6eb59d0c2615cb0df19f76540d8db1f5691c66141b9b7e1ad638122c5a1bf631",
+        "signature": "ea64635096c70eefca177afa4d05df01629540ca00fe31b9960c069ec30a374df451cf924e10d6db69e36481ed22b7479e82020907aa7fe18f0a9b5efce99f07",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_8b2d23ef6002",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "727f6f15cdde72123fb3dfa55063d1f1c34494ad4d3f9526016b380ca89c989c",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.971013
+        }
+      },
+      {
+        "seq": 12,
+        "prev_hash": "6eb59d0c2615cb0df19f76540d8db1f5691c66141b9b7e1ad638122c5a1bf631",
+        "record_hash": "bfd66129fa5e69c464957ba2dbb1cd15782504b299d9562eda4239116c11144c",
+        "signature": "92520ed0890e3add1595ac4d10cb1dc56f5120f93aceb8db7d2d0386c0c1347a9a0a361938961160ab1ff2184b16a51c24331caf89f0818822d38cddc7d90e00",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_5ddc54458841",
+          "question_hash": "c050b1f754104e9bc0550b5f1068b2943050559438bb0abac3a451c775d2d8fd",
+          "persona": "equity_analyst",
+          "ts": 1780165105.971169
+        }
+      },
+      {
+        "seq": 13,
+        "prev_hash": "bfd66129fa5e69c464957ba2dbb1cd15782504b299d9562eda4239116c11144c",
+        "record_hash": "f755717cb68bb72fd55b3e1fc881c9e41017ab96900b23a74ad510e0a686de8d",
+        "signature": "e15ca1e302cf621c40f2440928be6380947b92d384fdd6dabf6b3e66c96b3c150d518f424d8e67188a7b0aa0af55cc85f50ab83d1c456d112072ecf128a4fc06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_5ddc54458841",
+          "query_hash": "c050b1f754104e9bc0550b5f1068b2943050559438bb0abac3a451c775d2d8fd",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.971322
+        }
+      },
+      {
+        "seq": 14,
+        "prev_hash": "f755717cb68bb72fd55b3e1fc881c9e41017ab96900b23a74ad510e0a686de8d",
+        "record_hash": "c276fd255d52ad889b4bdc12fc0eaae92a331fc7664e403a2282e96015728374",
+        "signature": "e7acb7a1a4e421f885367a90ff433ae24417d2fd702135b0a470408bd76313d8a4c9c96297170982922a3b02fe55a889d13a34ff87e3334a304b61283a47ed0b",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_5ddc54458841",
+          "topic": "placeholder_topic",
+          "source_a_hash": "4756389d381bb58234542411419bf06b82a19599ba535213ce260a82a89f3347",
+          "source_b_hash": "e36f61fe5cb1e6ec25f2eacbd5bd4dc5e7c49524d9991deffb53bfadc00439d6",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.971485
+        }
+      },
+      {
+        "seq": 15,
+        "prev_hash": "c276fd255d52ad889b4bdc12fc0eaae92a331fc7664e403a2282e96015728374",
+        "record_hash": "2304fb4d678fb62a0f895cdaca561452e839b3c1f43f09fd3397d7edb5c00c01",
+        "signature": "d8c3294a6c2e9c2abd398bb0cb6aae087cc0c3aa16b0e2e9b46533623655b33e16a28007ff81c2af20b87ae9ae0210dd764557eee9f8b82568f6aeb2444c1209",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_5ddc54458841",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "cb5441c641644e4328b4699d868b8389e4b52fa654e10b61a0b0b5c5f2429387",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.9716501
+        }
+      },
+      {
+        "seq": 16,
+        "prev_hash": "2304fb4d678fb62a0f895cdaca561452e839b3c1f43f09fd3397d7edb5c00c01",
+        "record_hash": "406e185ddfe2fdda8d5b84aeda2d3a8b9f6d0db016b4e7f4ee090b0bb624090a",
+        "signature": "733c43980f47ed86d798c299afdafcf19a40164fca5eb5a1756969133c3c49f337aee602745de56918c4a7d503980a725093809e7345521821663d9c61ae6b0e",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_7f858395bbcd",
+          "question_hash": "76ca47d097b8c40d23b2b3ed8590eecbc70d7aa1713f37bb026ee5c596ae10c0",
+          "persona": "equity_analyst",
+          "ts": 1780165105.971807
+        }
+      },
+      {
+        "seq": 17,
+        "prev_hash": "406e185ddfe2fdda8d5b84aeda2d3a8b9f6d0db016b4e7f4ee090b0bb624090a",
+        "record_hash": "d62fd2bb435334c36ba2225df28ad0dfd01b26da28b8d0b1692fa2a505f710cd",
+        "signature": "ebef66506e57a0a90b6a1e6fcf0c634fa00328dd543a28e695281daa16b93d3f36a79647187703670a17d49969760b35f4eefcd0158a3e0fc9ad09d720c1510c",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_7f858395bbcd",
+          "query_hash": "76ca47d097b8c40d23b2b3ed8590eecbc70d7aa1713f37bb026ee5c596ae10c0",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.971959
+        }
+      },
+      {
+        "seq": 18,
+        "prev_hash": "d62fd2bb435334c36ba2225df28ad0dfd01b26da28b8d0b1692fa2a505f710cd",
+        "record_hash": "01f23a65fe5fbe83d403a651ebb6748bc880d3ff77277d8b7e0a5496ec0c3eae",
+        "signature": "0195701453c5f182eedd772f2ab6e0670eac8f8aa4fdbf8b1b17deecb04e36ac8fb7dfb470dd92a6d5ebc7a78e21cef5d1177d247c9dfe3a0f15696493f8e503",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_7f858395bbcd",
+          "topic": "placeholder_topic",
+          "source_a_hash": "f23ed86683797e006043615b9c838b0f08b1aabcbff06765a059eacbd3d6a299",
+          "source_b_hash": "b32b63f49c163bf17e7497ef97863aab42d8d6d7aa851aa8768e3e511145de07",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.972111
+        }
+      },
+      {
+        "seq": 19,
+        "prev_hash": "01f23a65fe5fbe83d403a651ebb6748bc880d3ff77277d8b7e0a5496ec0c3eae",
+        "record_hash": "9a6d841ff9e537fd9aea8fc6aea645fa8d4e8569aff42ecb1623af0a83a93149",
+        "signature": "a6c050767db77d3515d1729f889bab4326ba9f3d2e880d6f400647c836805b2e2ebf02a8227523e3dcb8332e5ff0455605a48d1f7a842d55ac1882c494d0300d",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_7f858395bbcd",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "30ee270d54e3e1b2563cbf21bbbbaf8d3f227ac083929a2cdf2fe15ae71bcac7",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.972267
+        }
+      },
+      {
+        "seq": 20,
+        "prev_hash": "9a6d841ff9e537fd9aea8fc6aea645fa8d4e8569aff42ecb1623af0a83a93149",
+        "record_hash": "a7a72d702049e0274c0cf821e387d492480dfd8252bed5a6465cac157272efe4",
+        "signature": "0b3638a3d2ea74d30fdfec9d124408ac496dcebcbda4f6c574a13d58db3b4ab2d8632294ddfc013394be5757288f1f76acea45c54b82365cd57a3333f0aa4c03",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_d2a8b7d7621c",
+          "question_hash": "b0b4854009595dd9a3b8c7bafbd1b6ddf4c409a745f665d9ac4fdcad153333f7",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9724228
+        }
+      },
+      {
+        "seq": 21,
+        "prev_hash": "a7a72d702049e0274c0cf821e387d492480dfd8252bed5a6465cac157272efe4",
+        "record_hash": "0491c7f6ebba84ee2cc9a2892fc2f4f5c96db5a5560e33f8145f6475f05975cd",
+        "signature": "c4d2cb15db850d57cf5cd03b5722b1891ee5414783d64acac819b65e12b102e0e50ae75acf02575abf8d293d9292317741aa89fc3a412b96a0a283df20432c06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_d2a8b7d7621c",
+          "query_hash": "b0b4854009595dd9a3b8c7bafbd1b6ddf4c409a745f665d9ac4fdcad153333f7",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.972577
+        }
+      },
+      {
+        "seq": 22,
+        "prev_hash": "0491c7f6ebba84ee2cc9a2892fc2f4f5c96db5a5560e33f8145f6475f05975cd",
+        "record_hash": "5ea290ef6170a1056c04beabc5cd8e12b21665319840c1c8b9f367ba8111136f",
+        "signature": "1b04cfa164e69840c28cfc348c40f01e8dee3c30a3408e253dae6b51d1223b3768f10ca83af2dc823ad19c0d299d02f3f8d3fd33451d351fb6192498887d7504",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_d2a8b7d7621c",
+          "topic": "placeholder_topic",
+          "source_a_hash": "65e1bb47bdf250c9105ae89da120a45436a51c78565af09c955d1bb3df29ef66",
+          "source_b_hash": "7b103fddaad352c66a41f61fa1c62ee5cec40c297fc741f86a67cac8a6490143",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.9727292
+        }
+      },
+      {
+        "seq": 23,
+        "prev_hash": "5ea290ef6170a1056c04beabc5cd8e12b21665319840c1c8b9f367ba8111136f",
+        "record_hash": "a3a4e4ba4723dd2cdd3f373bb9ade22090f3a3af88971ec1dd9b10f8b7484a95",
+        "signature": "694cbcc05d258985c29bbbf183776f49159169239f253da4cffbcbe52b3779c2cf666b29b82629a1e225385ec11d57cef9bf871d00f8689a0004b1545e617903",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_d2a8b7d7621c",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "b42bd71ed39e845208f923fe0824fd438268f46dadddff08b271e020d18d5ba1",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.972882
+        }
+      },
+      {
+        "seq": 24,
+        "prev_hash": "a3a4e4ba4723dd2cdd3f373bb9ade22090f3a3af88971ec1dd9b10f8b7484a95",
+        "record_hash": "53180f73ac8bc9c6a062dd6fb4afa27dd674f2ca9307a3e6a872ac28dc2b3807",
+        "signature": "486f555bab22e84b145de6c9b103cf18b39fbb1836d446eb8180ebb15d98f3837523040fb0353bb4d83d8fbfb86937db719cf4b5e9d39f81f41cf2255ecbb80d",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_821574c4dd14",
+          "question_hash": "61b559c2158a2a19e1440aed6079dec5156febc9fb3ae9bf08d97226689bf879",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9730382
+        }
+      },
+      {
+        "seq": 25,
+        "prev_hash": "53180f73ac8bc9c6a062dd6fb4afa27dd674f2ca9307a3e6a872ac28dc2b3807",
+        "record_hash": "9af65b7fab55aa56d30f7557d723fc4201827947b4f9c93c04f04ed02236ab41",
+        "signature": "ac7f1429c3f9a16a4b9d0164bef97197b3d02312fc72254f2df99c6bfbc2ebaad8e474a094934f820ef2eac78122934e1d28d7166213e2895ffec3793cd99b06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_821574c4dd14",
+          "query_hash": "61b559c2158a2a19e1440aed6079dec5156febc9fb3ae9bf08d97226689bf879",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.973191
+        }
+      },
+      {
+        "seq": 26,
+        "prev_hash": "9af65b7fab55aa56d30f7557d723fc4201827947b4f9c93c04f04ed02236ab41",
+        "record_hash": "1a8296a06ac4f76e11c49847fa7dee628cab948106ea1571f15c9f3708414762",
+        "signature": "dd1b6815616f2f23bf048532367360e129ce47c72c5b146b5be8404c17be1827755862a5f6db0273d555209b00a66f31e5ccbda294da50409fa03eedaf64ee0f",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_821574c4dd14",
+          "topic": "placeholder_topic",
+          "source_a_hash": "b1cda7c2ea676268a79f07f3128c2e93d75b717410827485c300adbbacb02cad",
+          "source_b_hash": "27213fd9fcca394cfbec75f15b7f1bde5d91aa9f1430733bab1f466148d4d634",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.973343
+        }
+      },
+      {
+        "seq": 27,
+        "prev_hash": "1a8296a06ac4f76e11c49847fa7dee628cab948106ea1571f15c9f3708414762",
+        "record_hash": "ef7bfd272224776a990aef2f2910506d837c409da4c94de6e4aa7a211687e00e",
+        "signature": "382306ae2e944ac2bcb6510676c829f81bb1fe3df1493636f85a684551fca776c241347cbac45d59efb56ab7ebdd37fe0c886b71efc1e2a76c38bb12f205ce05",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_821574c4dd14",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "9c7eefeed9a4359714fa2ee33933fe38183cdb37c7a20d34d5b54012f379985c",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.973495
+        }
+      },
+      {
+        "seq": 28,
+        "prev_hash": "ef7bfd272224776a990aef2f2910506d837c409da4c94de6e4aa7a211687e00e",
+        "record_hash": "d63ee6dbd07c79eecaabe8227b9310faf2a0c7b6965ef3f430ddab2b2cf5101f",
+        "signature": "e3c397a6eedcfb4ae028ad0863e144f01ed96ed6f1a196ebe55b30f0867aa887585db25174878d4dfcb3a8a71f150930a7862fb16c7b09310e8e8778af3f5d07",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_bc8fd13a2158",
+          "question_hash": "f876bae964ba283f15a02f5b3eea8b156720b32f83d6517cd0c71606dd93289f",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9736588
+        }
+      },
+      {
+        "seq": 29,
+        "prev_hash": "d63ee6dbd07c79eecaabe8227b9310faf2a0c7b6965ef3f430ddab2b2cf5101f",
+        "record_hash": "fb7b1bf6d5217e07b2884e2f77b8ff27a1e6825bbad65eead1bf0eba8d7a4818",
+        "signature": "27e8d03ab20c0432ce317308bae92c90bda2e381a76d7c5a84ba9c2a20aa6bb27f2866c10185658e3ec1ccef84d4f554d1123455e4baee2f2fd385ac00424907",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_bc8fd13a2158",
+          "query_hash": "f876bae964ba283f15a02f5b3eea8b156720b32f83d6517cd0c71606dd93289f",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.973813
+        }
+      },
+      {
+        "seq": 30,
+        "prev_hash": "fb7b1bf6d5217e07b2884e2f77b8ff27a1e6825bbad65eead1bf0eba8d7a4818",
+        "record_hash": "f091ecee71d16e5258e94c8cfdd6c3fa7460931ef0ba4f4c642831b0717209dd",
+        "signature": "5e4ce42c73f90618bef4919772ba873a609e8c47ef0c183f2ef806633de1d6624a3337249937530e02c01ee888d9c387498724c0b95fd13cd2a0cc14b074d30f",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_bc8fd13a2158",
+          "topic": "placeholder_topic",
+          "source_a_hash": "132e72ff524a7b3a4143214103ce18c9d6eebdea3c2516ea7824624cb090956a",
+          "source_b_hash": "ed93374792250f3a001aeb5e889a017fc881777cb51b4b66c10a72abcb658c72",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.973964
+        }
+      },
+      {
+        "seq": 31,
+        "prev_hash": "f091ecee71d16e5258e94c8cfdd6c3fa7460931ef0ba4f4c642831b0717209dd",
+        "record_hash": "696edab870522d3e13b4efc2fa8b786ed771b1280bb129c03646c51430e53f2c",
+        "signature": "ddf6570f18fe2d2283f6dfd76e45694a141573e28d410a5aa4d78b83c7699e1a50368b8391474d7e145c51162c97922d7b2d020b632b9eceedbac338f3150801",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_bc8fd13a2158",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "aab80d4b45bdb5f07ea61ca63db50762633da1f756a340a592953b8e3a302286",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.974134
+        }
+      }
+    ]
+  },
+  "tamper_demo": {
+    "description": "Mutate any byte in any packet -> that packet's verify() returns False",
+    "tampered_packet_seq": 5,
+    "tampered_field": "query_hash",
+    "tampered_verify_result": false,
+    "original_packet_verify_result": true
+  },
+  "compliance_export": {
+    "verify_key": "d58ae79f8b7ef95b7cfcc6a71bed74ac225bdbc2df48b466823b7208240076dd",
+    "retention_months": 6,
+    "records_in_retention": 32,
+    "compliance_framework": "EU AI Act Article 12",
+    "records": [
+      {
+        "seq": 0,
+        "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "record_hash": "f24a574dccd70b51b9dd337896f0aeb5679ccfa3d8aed810432c10f5de07875d",
+        "signature": "ff453d65245e033b90df1be07abad715ce11e2034bffd464cbb1dc16c288839d8ffb2617044b9d431a4455c912613565eb8d86e0356e25d80a63b00a4c5d3401",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_b0b7428b2e82",
+          "question_hash": "de28165ab125e9e3b2da814a0f33f46e4de8ff5f99413edcf0a3c1ffbe9dc4ab",
+          "persona": "equity_analyst",
+          "ts": 1780165105.96911
+        }
+      },
+      {
+        "seq": 1,
+        "prev_hash": "f24a574dccd70b51b9dd337896f0aeb5679ccfa3d8aed810432c10f5de07875d",
+        "record_hash": "cacdef113d524020d8acc39e32436bb740e942a9be478e4faf19eb5eb66c5c59",
+        "signature": "41c65fbd4823bc4d6a145055667e9dd6b6d74816f8e31de5904ce861308561f87a7f2593dfd23b5ec3224edd1470f984d558ceeed67c47fc8735eb54014b660e",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_b0b7428b2e82",
+          "query_hash": "de28165ab125e9e3b2da814a0f33f46e4de8ff5f99413edcf0a3c1ffbe9dc4ab",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.969321
+        }
+      },
+      {
+        "seq": 2,
+        "prev_hash": "cacdef113d524020d8acc39e32436bb740e942a9be478e4faf19eb5eb66c5c59",
+        "record_hash": "77dcd8e6e574abb162b56aecaa8127455a079dde9d39470a599630df5a856bfb",
+        "signature": "40e6f6a5f926ba80843d25cf9b5abca027408b84dbc9a2add25136e3b14385b06d642a131c279e304940e8f8ed271bfabd0b2e2e2e300002c8c39cf3c92b8008",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_b0b7428b2e82",
+          "topic": "placeholder_topic",
+          "source_a_hash": "d998e37f17710ab3ebff24ed1a846da8d0f8d520575de263a55809c8575bfe89",
+          "source_b_hash": "7f691e2b71f7cc67cef0a732056eef2d19bd7d5801184003b8833e7b8f20802d",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.9694898
+        }
+      },
+      {
+        "seq": 3,
+        "prev_hash": "77dcd8e6e574abb162b56aecaa8127455a079dde9d39470a599630df5a856bfb",
+        "record_hash": "1bdd37400c5b58321275d3f90a1aae163b20cd963dfc111b781c6e8110cf0769",
+        "signature": "9fa76d0db1770a2d1b4a423821ac5f2f256083291f018159ec0d2da1c5d3db1e626e8564713a44307503ab61fb429ef38c0a8218644fe55c3d96c3dae6dd2605",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_b0b7428b2e82",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "84c5281802eb266ea866c308e993f7e75c2992ec115f2499e306434c701ea229",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.57,
+          "ts": 1780165105.969663
+        }
+      },
+      {
+        "seq": 4,
+        "prev_hash": "1bdd37400c5b58321275d3f90a1aae163b20cd963dfc111b781c6e8110cf0769",
+        "record_hash": "c6283cb3b765cbb455666bf98d607fcde1de5c145e5cd25fe13c05af6736c5a6",
+        "signature": "1b649c869cd9603616e451cb3843257c48ea5ca2bc97f9629e00081ab75a3f80adf646e66083e845b0a40e40d85bfa40c279fd1ba05f2aef91e8937f7587e806",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_6a420407fe42",
+          "question_hash": "637243e4a3ae986cdb3fca77b85937b2fd14b77d767c2a67f30ed0a6646b1812",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9698298
+        }
+      },
+      {
+        "seq": 5,
+        "prev_hash": "c6283cb3b765cbb455666bf98d607fcde1de5c145e5cd25fe13c05af6736c5a6",
+        "record_hash": "4c1318226e60a925a89537ec5daa915a5a79b3b3850de93455577142b0906cf8",
+        "signature": "66a3f5458c35ea861f996a04e29182fff11ca1acfe7072de0d55101dd505705c41601955ccc3c99a6d121e59af4c20c92d31874b82775b254566c6a6c54e6304",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_6a420407fe42",
+          "query_hash": "637243e4a3ae986cdb3fca77b85937b2fd14b77d767c2a67f30ed0a6646b1812",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.970005
+        }
+      },
+      {
+        "seq": 6,
+        "prev_hash": "4c1318226e60a925a89537ec5daa915a5a79b3b3850de93455577142b0906cf8",
+        "record_hash": "5560c4ef3a150f184009f792813622fd84665ba62fdcac8c810b6557dbc5530d",
+        "signature": "d5c3f1b32b9ae370b1f32bf128a8121d1ee706f9f4c307e54aee0899c3395714631ef7844ff55d54abd581d6e06b68717cb91b8a51935a81c2a054cbe2462a02",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_6a420407fe42",
+          "topic": "placeholder_topic",
+          "source_a_hash": "336b8faa9448a88140018587b70adbde4a1d6849067c8824c55d5dcbecf5dbb2",
+          "source_b_hash": "7854df2dd10b98885d8f1da1c505dd1a11a5256af46da28861912732e5d789e2",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.970183
+        }
+      },
+      {
+        "seq": 7,
+        "prev_hash": "5560c4ef3a150f184009f792813622fd84665ba62fdcac8c810b6557dbc5530d",
+        "record_hash": "ae9a421ca696f859771317551a0bd9dff65e1cee2b7f33d490b8e97f9fce0a58",
+        "signature": "9851b692372a00e24241552a63ab0c155c2c191d6643dff7a044afb3f8de4f0dbcd18697367b9e667f83d79b3be345da5a0d5ac4c4c77a68bb3ecf0cd2b36b05",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_6a420407fe42",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "6aab0358bcd2a895055366c5a009334255d59204a90948ae1d308ce9fd598c2f",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.53,
+          "ts": 1780165105.9703581
+        }
+      },
+      {
+        "seq": 8,
+        "prev_hash": "ae9a421ca696f859771317551a0bd9dff65e1cee2b7f33d490b8e97f9fce0a58",
+        "record_hash": "96517cd9ac09b9ec6d6a0abfaf28663865e33998e7680e2f455e90fd6d1953e6",
+        "signature": "d83acce9603efa09b31f30cb0df34d79cf9967ea16432417386508692aeb6e322bf12057c5d5d4d576ae59acdf3e4f6fc95249149d35586d48ce05f9a6328e01",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_8b2d23ef6002",
+          "question_hash": "fc3baf2137b26d9cf920bc4f8a7b38ac23ee3808bbceefec4316653a3f694974",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9705331
+        }
+      },
+      {
+        "seq": 9,
+        "prev_hash": "96517cd9ac09b9ec6d6a0abfaf28663865e33998e7680e2f455e90fd6d1953e6",
+        "record_hash": "7cb04ce8fdefaa67fa6f5d489739d5552e9a50bb26a131db5d7cd0560bfb2e44",
+        "signature": "933a2a2c963b6958d46cbbe5a417a7ec55a6b2ba89346483b064de91194c3cc180fd5a56ff4df5d47b9013fca95406123cddee7d5e299651f96fbfd01d478505",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_8b2d23ef6002",
+          "query_hash": "fc3baf2137b26d9cf920bc4f8a7b38ac23ee3808bbceefec4316653a3f694974",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.01,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.9707038
+        }
+      },
+      {
+        "seq": 10,
+        "prev_hash": "7cb04ce8fdefaa67fa6f5d489739d5552e9a50bb26a131db5d7cd0560bfb2e44",
+        "record_hash": "a77429cdca9e2f5cba20b75534fdc73ec262544e114be4331a718f2b5a095183",
+        "signature": "7689a464e61f5edeab9398978b3abbeaa898cce48b15dda189d8a295291dbd3580cf1391ffafc66756f645847a299350bdd503dddd7bd2c4b91c5d160a249709",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_8b2d23ef6002",
+          "topic": "placeholder_topic",
+          "source_a_hash": "2f464b7e6d4e6561ed7e191223e524f91f232bcc407b51991bc2d264a3e1685f",
+          "source_b_hash": "641d068b95ef2dd77044a26048a73c4e5168e05da48ce7fe81a7436b423bf99b",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.970858
+        }
+      },
+      {
+        "seq": 11,
+        "prev_hash": "a77429cdca9e2f5cba20b75534fdc73ec262544e114be4331a718f2b5a095183",
+        "record_hash": "6eb59d0c2615cb0df19f76540d8db1f5691c66141b9b7e1ad638122c5a1bf631",
+        "signature": "ea64635096c70eefca177afa4d05df01629540ca00fe31b9960c069ec30a374df451cf924e10d6db69e36481ed22b7479e82020907aa7fe18f0a9b5efce99f07",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_8b2d23ef6002",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "727f6f15cdde72123fb3dfa55063d1f1c34494ad4d3f9526016b380ca89c989c",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.971013
+        }
+      },
+      {
+        "seq": 12,
+        "prev_hash": "6eb59d0c2615cb0df19f76540d8db1f5691c66141b9b7e1ad638122c5a1bf631",
+        "record_hash": "bfd66129fa5e69c464957ba2dbb1cd15782504b299d9562eda4239116c11144c",
+        "signature": "92520ed0890e3add1595ac4d10cb1dc56f5120f93aceb8db7d2d0386c0c1347a9a0a361938961160ab1ff2184b16a51c24331caf89f0818822d38cddc7d90e00",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_5ddc54458841",
+          "question_hash": "c050b1f754104e9bc0550b5f1068b2943050559438bb0abac3a451c775d2d8fd",
+          "persona": "equity_analyst",
+          "ts": 1780165105.971169
+        }
+      },
+      {
+        "seq": 13,
+        "prev_hash": "bfd66129fa5e69c464957ba2dbb1cd15782504b299d9562eda4239116c11144c",
+        "record_hash": "f755717cb68bb72fd55b3e1fc881c9e41017ab96900b23a74ad510e0a686de8d",
+        "signature": "e15ca1e302cf621c40f2440928be6380947b92d384fdd6dabf6b3e66c96b3c150d518f424d8e67188a7b0aa0af55cc85f50ab83d1c456d112072ecf128a4fc06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_5ddc54458841",
+          "query_hash": "c050b1f754104e9bc0550b5f1068b2943050559438bb0abac3a451c775d2d8fd",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.971322
+        }
+      },
+      {
+        "seq": 14,
+        "prev_hash": "f755717cb68bb72fd55b3e1fc881c9e41017ab96900b23a74ad510e0a686de8d",
+        "record_hash": "c276fd255d52ad889b4bdc12fc0eaae92a331fc7664e403a2282e96015728374",
+        "signature": "e7acb7a1a4e421f885367a90ff433ae24417d2fd702135b0a470408bd76313d8a4c9c96297170982922a3b02fe55a889d13a34ff87e3334a304b61283a47ed0b",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_5ddc54458841",
+          "topic": "placeholder_topic",
+          "source_a_hash": "4756389d381bb58234542411419bf06b82a19599ba535213ce260a82a89f3347",
+          "source_b_hash": "e36f61fe5cb1e6ec25f2eacbd5bd4dc5e7c49524d9991deffb53bfadc00439d6",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.971485
+        }
+      },
+      {
+        "seq": 15,
+        "prev_hash": "c276fd255d52ad889b4bdc12fc0eaae92a331fc7664e403a2282e96015728374",
+        "record_hash": "2304fb4d678fb62a0f895cdaca561452e839b3c1f43f09fd3397d7edb5c00c01",
+        "signature": "d8c3294a6c2e9c2abd398bb0cb6aae087cc0c3aa16b0e2e9b46533623655b33e16a28007ff81c2af20b87ae9ae0210dd764557eee9f8b82568f6aeb2444c1209",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_5ddc54458841",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "cb5441c641644e4328b4699d868b8389e4b52fa654e10b61a0b0b5c5f2429387",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.9716501
+        }
+      },
+      {
+        "seq": 16,
+        "prev_hash": "2304fb4d678fb62a0f895cdaca561452e839b3c1f43f09fd3397d7edb5c00c01",
+        "record_hash": "406e185ddfe2fdda8d5b84aeda2d3a8b9f6d0db016b4e7f4ee090b0bb624090a",
+        "signature": "733c43980f47ed86d798c299afdafcf19a40164fca5eb5a1756969133c3c49f337aee602745de56918c4a7d503980a725093809e7345521821663d9c61ae6b0e",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_7f858395bbcd",
+          "question_hash": "76ca47d097b8c40d23b2b3ed8590eecbc70d7aa1713f37bb026ee5c596ae10c0",
+          "persona": "equity_analyst",
+          "ts": 1780165105.971807
+        }
+      },
+      {
+        "seq": 17,
+        "prev_hash": "406e185ddfe2fdda8d5b84aeda2d3a8b9f6d0db016b4e7f4ee090b0bb624090a",
+        "record_hash": "d62fd2bb435334c36ba2225df28ad0dfd01b26da28b8d0b1692fa2a505f710cd",
+        "signature": "ebef66506e57a0a90b6a1e6fcf0c634fa00328dd543a28e695281daa16b93d3f36a79647187703670a17d49969760b35f4eefcd0158a3e0fc9ad09d720c1510c",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_7f858395bbcd",
+          "query_hash": "76ca47d097b8c40d23b2b3ed8590eecbc70d7aa1713f37bb026ee5c596ae10c0",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.971959
+        }
+      },
+      {
+        "seq": 18,
+        "prev_hash": "d62fd2bb435334c36ba2225df28ad0dfd01b26da28b8d0b1692fa2a505f710cd",
+        "record_hash": "01f23a65fe5fbe83d403a651ebb6748bc880d3ff77277d8b7e0a5496ec0c3eae",
+        "signature": "0195701453c5f182eedd772f2ab6e0670eac8f8aa4fdbf8b1b17deecb04e36ac8fb7dfb470dd92a6d5ebc7a78e21cef5d1177d247c9dfe3a0f15696493f8e503",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_7f858395bbcd",
+          "topic": "placeholder_topic",
+          "source_a_hash": "f23ed86683797e006043615b9c838b0f08b1aabcbff06765a059eacbd3d6a299",
+          "source_b_hash": "b32b63f49c163bf17e7497ef97863aab42d8d6d7aa851aa8768e3e511145de07",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.972111
+        }
+      },
+      {
+        "seq": 19,
+        "prev_hash": "01f23a65fe5fbe83d403a651ebb6748bc880d3ff77277d8b7e0a5496ec0c3eae",
+        "record_hash": "9a6d841ff9e537fd9aea8fc6aea645fa8d4e8569aff42ecb1623af0a83a93149",
+        "signature": "a6c050767db77d3515d1729f889bab4326ba9f3d2e880d6f400647c836805b2e2ebf02a8227523e3dcb8332e5ff0455605a48d1f7a842d55ac1882c494d0300d",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_7f858395bbcd",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "30ee270d54e3e1b2563cbf21bbbbaf8d3f227ac083929a2cdf2fe15ae71bcac7",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.972267
+        }
+      },
+      {
+        "seq": 20,
+        "prev_hash": "9a6d841ff9e537fd9aea8fc6aea645fa8d4e8569aff42ecb1623af0a83a93149",
+        "record_hash": "a7a72d702049e0274c0cf821e387d492480dfd8252bed5a6465cac157272efe4",
+        "signature": "0b3638a3d2ea74d30fdfec9d124408ac496dcebcbda4f6c574a13d58db3b4ab2d8632294ddfc013394be5757288f1f76acea45c54b82365cd57a3333f0aa4c03",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_d2a8b7d7621c",
+          "question_hash": "b0b4854009595dd9a3b8c7bafbd1b6ddf4c409a745f665d9ac4fdcad153333f7",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9724228
+        }
+      },
+      {
+        "seq": 21,
+        "prev_hash": "a7a72d702049e0274c0cf821e387d492480dfd8252bed5a6465cac157272efe4",
+        "record_hash": "0491c7f6ebba84ee2cc9a2892fc2f4f5c96db5a5560e33f8145f6475f05975cd",
+        "signature": "c4d2cb15db850d57cf5cd03b5722b1891ee5414783d64acac819b65e12b102e0e50ae75acf02575abf8d293d9292317741aa89fc3a412b96a0a283df20432c06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_d2a8b7d7621c",
+          "query_hash": "b0b4854009595dd9a3b8c7bafbd1b6ddf4c409a745f665d9ac4fdcad153333f7",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.972577
+        }
+      },
+      {
+        "seq": 22,
+        "prev_hash": "0491c7f6ebba84ee2cc9a2892fc2f4f5c96db5a5560e33f8145f6475f05975cd",
+        "record_hash": "5ea290ef6170a1056c04beabc5cd8e12b21665319840c1c8b9f367ba8111136f",
+        "signature": "1b04cfa164e69840c28cfc348c40f01e8dee3c30a3408e253dae6b51d1223b3768f10ca83af2dc823ad19c0d299d02f3f8d3fd33451d351fb6192498887d7504",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_d2a8b7d7621c",
+          "topic": "placeholder_topic",
+          "source_a_hash": "65e1bb47bdf250c9105ae89da120a45436a51c78565af09c955d1bb3df29ef66",
+          "source_b_hash": "7b103fddaad352c66a41f61fa1c62ee5cec40c297fc741f86a67cac8a6490143",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.9727292
+        }
+      },
+      {
+        "seq": 23,
+        "prev_hash": "5ea290ef6170a1056c04beabc5cd8e12b21665319840c1c8b9f367ba8111136f",
+        "record_hash": "a3a4e4ba4723dd2cdd3f373bb9ade22090f3a3af88971ec1dd9b10f8b7484a95",
+        "signature": "694cbcc05d258985c29bbbf183776f49159169239f253da4cffbcbe52b3779c2cf666b29b82629a1e225385ec11d57cef9bf871d00f8689a0004b1545e617903",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_d2a8b7d7621c",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "b42bd71ed39e845208f923fe0824fd438268f46dadddff08b271e020d18d5ba1",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.972882
+        }
+      },
+      {
+        "seq": 24,
+        "prev_hash": "a3a4e4ba4723dd2cdd3f373bb9ade22090f3a3af88971ec1dd9b10f8b7484a95",
+        "record_hash": "53180f73ac8bc9c6a062dd6fb4afa27dd674f2ca9307a3e6a872ac28dc2b3807",
+        "signature": "486f555bab22e84b145de6c9b103cf18b39fbb1836d446eb8180ebb15d98f3837523040fb0353bb4d83d8fbfb86937db719cf4b5e9d39f81f41cf2255ecbb80d",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_821574c4dd14",
+          "question_hash": "61b559c2158a2a19e1440aed6079dec5156febc9fb3ae9bf08d97226689bf879",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9730382
+        }
+      },
+      {
+        "seq": 25,
+        "prev_hash": "53180f73ac8bc9c6a062dd6fb4afa27dd674f2ca9307a3e6a872ac28dc2b3807",
+        "record_hash": "9af65b7fab55aa56d30f7557d723fc4201827947b4f9c93c04f04ed02236ab41",
+        "signature": "ac7f1429c3f9a16a4b9d0164bef97197b3d02312fc72254f2df99c6bfbc2ebaad8e474a094934f820ef2eac78122934e1d28d7166213e2895ffec3793cd99b06",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_821574c4dd14",
+          "query_hash": "61b559c2158a2a19e1440aed6079dec5156febc9fb3ae9bf08d97226689bf879",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.973191
+        }
+      },
+      {
+        "seq": 26,
+        "prev_hash": "9af65b7fab55aa56d30f7557d723fc4201827947b4f9c93c04f04ed02236ab41",
+        "record_hash": "1a8296a06ac4f76e11c49847fa7dee628cab948106ea1571f15c9f3708414762",
+        "signature": "dd1b6815616f2f23bf048532367360e129ce47c72c5b146b5be8404c17be1827755862a5f6db0273d555209b00a66f31e5ccbda294da50409fa03eedaf64ee0f",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_821574c4dd14",
+          "topic": "placeholder_topic",
+          "source_a_hash": "b1cda7c2ea676268a79f07f3128c2e93d75b717410827485c300adbbacb02cad",
+          "source_b_hash": "27213fd9fcca394cfbec75f15b7f1bde5d91aa9f1430733bab1f466148d4d634",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.973343
+        }
+      },
+      {
+        "seq": 27,
+        "prev_hash": "1a8296a06ac4f76e11c49847fa7dee628cab948106ea1571f15c9f3708414762",
+        "record_hash": "ef7bfd272224776a990aef2f2910506d837c409da4c94de6e4aa7a211687e00e",
+        "signature": "382306ae2e944ac2bcb6510676c829f81bb1fe3df1493636f85a684551fca776c241347cbac45d59efb56ab7ebdd37fe0c886b71efc1e2a76c38bb12f205ce05",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_821574c4dd14",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "9c7eefeed9a4359714fa2ee33933fe38183cdb37c7a20d34d5b54012f379985c",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.46,
+          "ts": 1780165105.973495
+        }
+      },
+      {
+        "seq": 28,
+        "prev_hash": "ef7bfd272224776a990aef2f2910506d837c409da4c94de6e4aa7a211687e00e",
+        "record_hash": "d63ee6dbd07c79eecaabe8227b9310faf2a0c7b6965ef3f430ddab2b2cf5101f",
+        "signature": "e3c397a6eedcfb4ae028ad0863e144f01ed96ed6f1a196ebe55b30f0867aa887585db25174878d4dfcb3a8a71f150930a7862fb16c7b09310e8e8778af3f5d07",
+        "entry": {
+          "event": "agent_query",
+          "request_id": "req_bc8fd13a2158",
+          "question_hash": "f876bae964ba283f15a02f5b3eea8b156720b32f83d6517cd0c71606dd93289f",
+          "persona": "equity_analyst",
+          "ts": 1780165105.9736588
+        }
+      },
+      {
+        "seq": 29,
+        "prev_hash": "d63ee6dbd07c79eecaabe8227b9310faf2a0c7b6965ef3f430ddab2b2cf5101f",
+        "record_hash": "fb7b1bf6d5217e07b2884e2f77b8ff27a1e6825bbad65eead1bf0eba8d7a4818",
+        "signature": "27e8d03ab20c0432ce317308bae92c90bda2e381a76d7c5a84ba9c2a20aa6bb27f2866c10185658e3ec1ccef84d4f554d1123455e4baee2f2fd385ac00424907",
+        "entry": {
+          "event": "fetch_serp",
+          "request_id": "req_bc8fd13a2158",
+          "query_hash": "f876bae964ba283f15a02f5b3eea8b156720b32f83d6517cd0c71606dd93289f",
+          "engine": "google",
+          "result_count": 3,
+          "latency_ms": 0.0,
+          "tool": "bright_data_serp_api",
+          "ts": 1780165105.973813
+        }
+      },
+      {
+        "seq": 30,
+        "prev_hash": "fb7b1bf6d5217e07b2884e2f77b8ff27a1e6825bbad65eead1bf0eba8d7a4818",
+        "record_hash": "f091ecee71d16e5258e94c8cfdd6c3fa7460931ef0ba4f4c642831b0717209dd",
+        "signature": "5e4ce42c73f90618bef4919772ba873a609e8c47ef0c183f2ef806633de1d6624a3337249937530e02c01ee888d9c387498724c0b95fd13cd2a0cc14b074d30f",
+        "entry": {
+          "event": "source_conflict",
+          "request_id": "req_bc8fd13a2158",
+          "topic": "placeholder_topic",
+          "source_a_hash": "132e72ff524a7b3a4143214103ce18c9d6eebdea3c2516ea7824624cb090956a",
+          "source_b_hash": "ed93374792250f3a001aeb5e889a017fc881777cb51b4b66c10a72abcb658c72",
+          "disagreement_type": "placeholder",
+          "ts": 1780165105.973964
+        }
+      },
+      {
+        "seq": 31,
+        "prev_hash": "f091ecee71d16e5258e94c8cfdd6c3fa7460931ef0ba4f4c642831b0717209dd",
+        "record_hash": "696edab870522d3e13b4efc2fa8b786ed771b1280bb129c03646c51430e53f2c",
+        "signature": "ddf6570f18fe2d2283f6dfd76e45694a141573e28d410a5aa4d78b83c7699e1a50368b8391474d7e145c51162c97922d7b2d020b632b9eceedbac338f3150801",
+        "entry": {
+          "event": "agent_synthesis",
+          "request_id": "req_bc8fd13a2158",
+          "model": "claude-sonnet-4-6",
+          "answer_hash": "aab80d4b45bdb5f07ea61ca63db50762633da1f756a340a592953b8e3a302286",
+          "citation_count": 3,
+          "confidence": 0.82,
+          "latency_ms": 0.48,
+          "ts": 1780165105.974134
+        }
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@
 
 **4 named agents answer your research question in ~30 seconds — every citation Ed25519-signed and publicly verifiable.** No API key needed; anyone can re-verify the chain with our open public key.
 
-**Demo credentials:** `research@acme.com / proof-it` · **Live demo:** [proofchain.dev/demo](https://proofchain.dev/demo)
+**Demo credentials:** `research@acme.com / proof-it` · **Live demo:** [proofchain-sardorrazikov-s-projects.vercel.app/demo](https://proofchain-sardorrazikov-s-projects.vercel.app/demo)
 
 [![Hackathon](https://img.shields.io/badge/Bright_Data-Web_Data_UNLOCKED_2026-blue)](https://lablab.ai/ai-hackathons/brightdata-ai-agents-web-data-hackathon)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
