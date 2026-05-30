@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+
+  <text x="100" y="120" class="brand" fill="#ffffff" font-size="72">Built for the regulated stack</text>
+  <text x="100" y="180" class="body" fill="#9ca3af" font-size="28">Where PROOFCHAIN delivers measurable value today</text>
+
+  <!-- Left: 5 verticals -->
+  <g transform="translate(100, 280)">
+    <text x="0" y="40" class="heading" fill="#10b981" font-size="32">Five verticals — one engine</text>
+    <g transform="translate(0, 80)">
+      <text x="0" y="0" class="mono" fill="#ffffff" font-size="22">1.</text>
+      <text x="60" y="0" class="body" fill="#ffffff" font-size="22" font-weight="700">Equity research analyst copilot</text>
+      <text x="60" y="30" class="body" fill="#9ca3af" font-size="20">Flagship · $30B/yr labor waste · AlphaSense $4B comp</text>
+
+      <text x="0" y="90" class="mono" fill="#ffffff" font-size="22">2.</text>
+      <text x="60" y="90" class="body" fill="#ffffff" font-size="22" font-weight="700">AML / KYC bank surveillance</text>
+      <text x="60" y="120" class="body" fill="#9ca3af" font-size="20">$3B+ fines on table · Recorded Future $2.65B comp</text>
+
+      <text x="0" y="180" class="mono" fill="#ffffff" font-size="22">3.</text>
+      <text x="60" y="180" class="body" fill="#ffffff" font-size="22" font-weight="700">Regulatory monitoring (RegTech)</text>
+      <text x="60" y="210" class="body" fill="#9ca3af" font-size="20">Market $14.9B → $107B by 2035</text>
+
+      <text x="0" y="270" class="mono" fill="#ffffff" font-size="22">4.</text>
+      <text x="60" y="270" class="body" fill="#ffffff" font-size="22" font-weight="700">Vendor risk (TPCRM)</text>
+      <text x="60" y="300" class="body" fill="#9ca3af" font-size="20">F500 cascade exposure · Mastercard RiskRecon</text>
+
+      <text x="0" y="360" class="mono" fill="#ffffff" font-size="22">5.</text>
+      <text x="60" y="360" class="body" fill="#ffffff" font-size="22" font-weight="700">Publisher provenance enforcement</text>
+      <text x="60" y="390" class="body" fill="#9ca3af" font-size="20">NYT v Perplexity (Dec 2025) · Adobe Content Credentials</text>
+    </g>
+  </g>
+
+  <!-- Right side: Acquirer landscape -->
+  <g transform="translate(1000, 280)">
+    <text x="0" y="40" class="heading" fill="#10b981" font-size="32">Acquirer landscape</text>
+    <g transform="translate(0, 80)">
+      <rect x="0" y="0" width="800" height="60" rx="8" fill="#131826" stroke="#1f2937" stroke-width="1"/>
+      <text x="20" y="38" class="body" fill="#ffffff" font-size="22" font-weight="700">Bright Data</text>
+      <text x="220" y="38" class="body" fill="#9ca3af" font-size="20">natural compliance for 100M+ daily agents</text>
+
+      <rect x="0" y="70" width="800" height="60" rx="8" fill="#131826" stroke="#1f2937" stroke-width="1"/>
+      <text x="20" y="108" class="body" fill="#ffffff" font-size="22" font-weight="700">Cloudflare</text>
+      <text x="220" y="108" class="body" fill="#9ca3af" font-size="20">IETF web-bot-auth co-authored architecture</text>
+
+      <rect x="0" y="140" width="800" height="60" rx="8" fill="#131826" stroke="#1f2937" stroke-width="1"/>
+      <text x="20" y="178" class="body" fill="#ffffff" font-size="22" font-weight="700">AlphaSense / Bloomberg</text>
+      <text x="380" y="178" class="body" fill="#9ca3af" font-size="20">equity research vertical</text>
+
+      <rect x="0" y="210" width="800" height="60" rx="8" fill="#131826" stroke="#1f2937" stroke-width="1"/>
+      <text x="20" y="248" class="body" fill="#ffffff" font-size="22" font-weight="700">Anthropic</text>
+      <text x="220" y="248" class="body" fill="#9ca3af" font-size="20">MCP provenance gap demand signal</text>
+
+      <rect x="0" y="280" width="800" height="60" rx="8" fill="#131826" stroke="#1f2937" stroke-width="1"/>
+      <text x="20" y="318" class="body" fill="#ffffff" font-size="22" font-weight="700">RegTech (NAVEX / Diligent)</text>
+      <text x="380" y="318" class="body" fill="#9ca3af" font-size="20">EU AI Act forcing function</text>
+    </g>
+  </g>
+
+  <!-- Footer CTA -->
+  <g transform="translate(100, 940)">
+    <rect x="0" y="0" width="1720" height="80" rx="12" fill="#131826" stroke="#10b981" stroke-width="2"/>
+    <text x="40" y="50" class="body" fill="#ffffff" font-size="26" font-weight="700">Try it:</text>
+    <text x="180" y="50" class="body" fill="#10b981" font-size="26">proofchain.dev/demo</text>
+    <text x="620" y="50" class="body" fill="#ffffff" font-size="26" font-weight="700">Author:</text>
+    <text x="760" y="50" class="body" fill="#10b981" font-size="26">Sardor Razikov</text>
+    <text x="1100" y="50" class="body" fill="#ffffff" font-size="26" font-weight="700">Contact:</text>
+    <text x="1250" y="50" class="body" fill="#10b981" font-size="26">razikovsardor1@gmail.com</text>
+  </g>
+</svg>

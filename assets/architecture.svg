@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+
+  <!-- Title -->
+  <text x="100" y="120" class="brand" fill="#ffffff" font-size="64">Architecture</text>
+  <text x="100" y="170" class="body" fill="#9ca3af" font-size="28">4 named agents · Bright Data MCP · Ed25519 evidence chain</text>
+
+  <!-- Top: User Agent -->
+  <g transform="translate(760, 240)">
+    <rect x="0" y="0" width="400" height="100" rx="12" fill="#131826" stroke="#3b82f6" stroke-width="3"/>
+    <text x="200" y="45" text-anchor="middle" class="heading" fill="#ffffff" font-size="28">AI Agent (Claude / GPT)</text>
+    <text x="200" y="78" text-anchor="middle" class="mono" fill="#9ca3af" font-size="18">MCP tool call</text>
+  </g>
+  <line x1="960" y1="340" x2="960" y2="400" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 4 Agents row -->
+  <g transform="translate(140, 420)">
+    <!-- Searcher -->
+    <rect x="0" y="0" width="380" height="180" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="190" y="55" text-anchor="middle" class="heading" fill="#ffffff" font-size="30">SEARCHER</text>
+    <text x="190" y="90" text-anchor="middle" class="body" fill="#10b981" font-size="20">Bright Data SERP API</text>
+    <text x="190" y="125" text-anchor="middle" class="body" fill="#9ca3af" font-size="18">Top-N organic results</text>
+    <text x="190" y="155" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">→ fetch_serp evidence</text>
+    <!-- Scraper -->
+    <rect x="420" y="0" width="380" height="180" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="610" y="55" text-anchor="middle" class="heading" fill="#ffffff" font-size="30">SCRAPER</text>
+    <text x="610" y="90" text-anchor="middle" class="body" fill="#10b981" font-size="20">Web Scraper + Unlocker</text>
+    <text x="610" y="125" text-anchor="middle" class="body" fill="#9ca3af" font-size="18">Structured content + SHA-256</text>
+    <text x="610" y="155" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">→ fetch_scraper evidence</text>
+    <!-- Verifier -->
+    <rect x="840" y="0" width="380" height="180" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="1030" y="55" text-anchor="middle" class="heading" fill="#ffffff" font-size="30">VERIFIER</text>
+    <text x="1030" y="90" text-anchor="middle" class="body" fill="#10b981" font-size="20">Ed25519 + hash chain</text>
+    <text x="1030" y="125" text-anchor="middle" class="body" fill="#9ca3af" font-size="18">Cross-source conflict detect</text>
+    <text x="1030" y="155" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">→ source_conflict evidence</text>
+    <!-- Synthesizer -->
+    <rect x="1260" y="0" width="380" height="180" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="1450" y="55" text-anchor="middle" class="heading" fill="#ffffff" font-size="30">SYNTHESIZER</text>
+    <text x="1450" y="90" text-anchor="middle" class="body" fill="#10b981" font-size="20">Claude Sonnet 4.6</text>
+    <text x="1450" y="125" text-anchor="middle" class="body" fill="#9ca3af" font-size="18">Grounded answer + citations</text>
+    <text x="1450" y="155" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">→ agent_synthesis evidence</text>
+  </g>
+
+  <!-- Connecting arrows between agents -->
+  <line x1="520" y1="510" x2="560" y2="510" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="940" y1="510" x2="980" y2="510" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1360" y1="510" x2="1400" y2="510" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- All packets flow down to evidence chain -->
+  <line x1="330" y1="600" x2="330" y2="700" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="750" y1="600" x2="750" y2="700" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="1170" y1="600" x2="1170" y2="700" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="1590" y1="600" x2="1590" y2="700" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Bottom: Evidence Chain -->
+  <g transform="translate(140, 720)">
+    <rect x="0" y="0" width="1640" height="220" rx="16" fill="#131826" stroke="#10b981" stroke-width="4"/>
+    <text x="40" y="60" class="heading" fill="#ffffff" font-size="36">Ed25519-signed Evidence Chain</text>
+    <text x="40" y="105" class="body" fill="#10b981" font-size="22">Every packet: SHA-256 hash + prev_hash + signed payload + seq number</text>
+    <text x="40" y="145" class="body" fill="#9ca3af" font-size="20">Tamper any byte → whole chain verify fails. Public verification with open key.</text>
+
+    <!-- Mini-chain visualization -->
+    <g transform="translate(1100, 50)">
+      <rect x="0" y="0" width="100" height="60" rx="6" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="50" y="38" text-anchor="middle" class="mono" fill="#10b981" font-size="20">#0</text>
+      <line x1="100" y1="30" x2="120" y2="30" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+      <rect x="120" y="0" width="100" height="60" rx="6" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="170" y="38" text-anchor="middle" class="mono" fill="#10b981" font-size="20">#1</text>
+      <line x1="220" y1="30" x2="240" y2="30" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+      <rect x="240" y="0" width="100" height="60" rx="6" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="290" y="38" text-anchor="middle" class="mono" fill="#10b981" font-size="20">#2</text>
+      <line x1="340" y1="30" x2="360" y2="30" stroke="#10b981" stroke-width="3" marker-end="url(#arrow)"/>
+      <rect x="360" y="0" width="100" height="60" rx="6" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="410" y="38" text-anchor="middle" class="mono" fill="#10b981" font-size="20">…</text>
+    </g>
+
+    <text x="40" y="195" class="mono" fill="#9ca3af" font-size="18">EU AI Act Article 12 compliant export · RFC 8785 canonicalization · IETF web-bot-auth aligned</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+
+  <text x="100" y="120" class="brand" fill="#ffffff" font-size="64">Evidence Packet Anatomy</text>
+  <text x="100" y="170" class="body" fill="#9ca3af" font-size="28">Inside every Bright Data fetch wrapped by PROOFCHAIN</text>
+
+  <!-- Big JSON-style packet visualization -->
+  <g transform="translate(140, 240)">
+    <rect x="0" y="0" width="1640" height="700" rx="20" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="60" y="80" class="mono" fill="#10b981" font-size="26">{</text>
+    <text x="120" y="130" class="mono" fill="#ffffff" font-size="24">"content":</text>
+    <text x="380" y="130" class="mono" fill="#9ca3af" font-size="24">"&lt;scraped HTML or JSON&gt;",</text>
+    <text x="120" y="180" class="mono" fill="#ffffff" font-size="24">"url":</text>
+    <text x="260" y="180" class="mono" fill="#9ca3af" font-size="24">"https://sec.gov/10-K/TSLA",</text>
+    <text x="120" y="230" class="mono" fill="#ffffff" font-size="24">"sha256_hash":</text>
+    <text x="430" y="230" class="mono" fill="#10b981" font-size="24">"a3f7b29c8d…e4f1c8d2",</text>
+    <text x="120" y="280" class="mono" fill="#ffffff" font-size="24">"timestamp":</text>
+    <text x="380" y="280" class="mono" fill="#9ca3af" font-size="24">"2026-05-30T15:00:00Z",</text>
+    <text x="120" y="330" class="mono" fill="#ffffff" font-size="24">"retrieval_method":</text>
+    <text x="540" y="330" class="mono" fill="#3b82f6" font-size="24">"BRIGHT_DATA_SERP_API",</text>
+    <text x="120" y="380" class="mono" fill="#ffffff" font-size="24">"robots_txt_status":</text>
+    <text x="540" y="380" class="mono" fill="#10b981" font-size="24">"allowed",</text>
+    <text x="120" y="430" class="mono" fill="#ffffff" font-size="24">"ed25519_signature":</text>
+    <text x="540" y="430" class="mono" fill="#10b981" font-size="24">"9eebe2f126…83b3082dea01",</text>
+    <text x="120" y="480" class="mono" fill="#ffffff" font-size="24">"prev_hash":</text>
+    <text x="380" y="480" class="mono" fill="#10b981" font-size="24">"&lt;hash of seq-1 packet&gt;",</text>
+    <text x="120" y="530" class="mono" fill="#ffffff" font-size="24">"seq":</text>
+    <text x="260" y="530" class="mono" fill="#9ca3af" font-size="24">42</text>
+    <text x="60" y="580" class="mono" fill="#10b981" font-size="26">}</text>
+
+    <!-- Side annotations -->
+    <line x1="1280" y1="230" x2="1480" y2="230" stroke="#10b981" stroke-width="2"/>
+    <text x="1490" y="237" class="body" fill="#10b981" font-size="22" font-weight="700">SHA-256 of content</text>
+
+    <line x1="1280" y1="430" x2="1480" y2="430" stroke="#10b981" stroke-width="2"/>
+    <text x="1490" y="437" class="body" fill="#10b981" font-size="22" font-weight="700">Ed25519 signature</text>
+
+    <line x1="1280" y1="480" x2="1480" y2="480" stroke="#10b981" stroke-width="2"/>
+    <text x="1490" y="487" class="body" fill="#10b981" font-size="22" font-weight="700">Hash-chain link</text>
+
+    <text x="60" y="660" class="body" fill="#9ca3af" font-size="22">Tamper any field → signature fails. Mutate prev_hash → whole chain breaks downstream.</text>
+  </g>
+
+  <text x="100" y="1010" class="body" fill="#9ca3af" font-size="20">RFC 8785 JCS canonicalization · libsodium Ed25519 · SHA-256 commit · MIT licensed</text>
+</svg>

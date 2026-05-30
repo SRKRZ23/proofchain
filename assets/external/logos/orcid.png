@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <style>
+    .img-container {
+      height: 80px;
+      visibility: visible;
+      text-align: center;
+      padding-top: 2px;
+      font-weight: bold;
+      display: block;
+    }
+  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" type="text/x-icon" href="/admin/internal/brand_favico_user.ico?t=" >
+<title>License Warning - Kerio Control</title>
+<link href="/nonauth/style/staticPage.css?v=8407" rel="stylesheet" type="text/css">
+
+
+<!--[if gte IE 8]><link  href="/nonauth/style/msie8.css?v=8407" rel="stylesheet" type="text/css"><![endif]-->
+<!--[if IE 7]><link  href="/nonauth/style/msie7.css?v=8407" rel="stylesheet" type="text/css"><![endif]-->
+
+</head>
+<body>
+
+<div id="spacer"></div>
+<div class="mainBody">
+<div class="header"><span>License Warning</span></div>
+
+
+    
+    
+	    
+<div class="details">
+
+<span class="title">There is no valid license for the product.</span><br>
+
+
+</div>
+
+    
+
+    
+    
+<div class="details">
+
+
+</div>
+
+    
+<div class="details">
+
+
+</div>
+
+    
+<div class="details">
+
+<div class="linkAlone"><a href="expiration.cs?dest=aHR0cDovL2luZm8ub3JjaWQub3JnL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIwLzA1L29yY2lkXzI0eDI0LnBuZw%3D%3D&redirect=1">Continue browsing</a></div>
+</div>
+
+
+    
+<div class="footer">Kerio Control</div>
+<span class="img-container">
+<img src="/brand_logo.png" onerror="this.style.display='none'" width="300" height="60" alt="">
+</span>
+</div>
+
+</body>
+</html>
+

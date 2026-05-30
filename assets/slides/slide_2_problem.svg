@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+  <text x="100" y="120" class="brand" fill="#ffffff" font-size="72">Three forces converging</text>
+  <text x="100" y="180" class="body" fill="#9ca3af" font-size="28">Why agent-web provenance becomes regulatory infrastructure in 2026</text>
+
+  <!-- 3 columns -->
+  <g transform="translate(100, 280)">
+    <!-- Force 1 -->
+    <rect x="0" y="0" width="540" height="640" rx="16" fill="#131826" stroke="#10b981" stroke-width="2"/>
+    <text x="40" y="80" class="brand" fill="#10b981" font-size="48">1</text>
+    <text x="40" y="150" class="heading" fill="#ffffff" font-size="34">Throwaway code</text>
+    <text x="40" y="210" class="body" fill="#9ca3af" font-size="22">"Code is suddenly free, ephemeral,</text>
+    <text x="40" y="240" class="body" fill="#9ca3af" font-size="22">malleable, discardable after use"</text>
+    <text x="40" y="280" class="body" fill="#10b981" font-size="20" font-weight="700">— Andrej Karpathy, Sequoia 2026</text>
+    <text x="40" y="350" class="body" fill="#9ca3af" font-size="22">"30% of apps on Vercel already</text>
+    <text x="40" y="380" class="body" fill="#9ca3af" font-size="22">come from agents"</text>
+    <text x="40" y="420" class="body" fill="#10b981" font-size="20" font-weight="700">— Guillermo Rauch, Vercel</text>
+    <text x="40" y="510" class="body" fill="#ffffff" font-size="24" font-weight="700">When code disappears,</text>
+    <text x="40" y="540" class="body" fill="#ffffff" font-size="24" font-weight="700">evidence is what remains.</text>
+
+    <!-- Force 2 -->
+    <rect x="570" y="0" width="540" height="640" rx="16" fill="#131826" stroke="#10b981" stroke-width="2"/>
+    <text x="610" y="80" class="brand" fill="#10b981" font-size="48">2</text>
+    <text x="610" y="150" class="heading" fill="#ffffff" font-size="34">IETF web-bot-auth</text>
+    <text x="610" y="200" class="body" fill="#9ca3af" font-size="22">draft-meunier-web-bot-auth-05</text>
+    <text x="610" y="230" class="body" fill="#9ca3af" font-size="22">March 2026</text>
+    <text x="610" y="300" class="body" fill="#ffffff" font-size="22">Cloudflare + Google co-authored</text>
+    <text x="610" y="350" class="body" fill="#9ca3af" font-size="22">Every AI bot gets Ed25519 keypair</text>
+    <text x="610" y="380" class="body" fill="#9ca3af" font-size="22">RFC 9421 HTTP signing</text>
+    <text x="610" y="450" class="body" fill="#9ca3af" font-size="22">Amazon, Cloudflare, Akamai, OpenAI</text>
+    <text x="610" y="480" class="body" fill="#9ca3af" font-size="22">all aligned with the direction</text>
+    <text x="610" y="560" class="body" fill="#10b981" font-size="20" font-weight="700">No hash chain, no content evidence,</text>
+    <text x="610" y="590" class="body" fill="#10b981" font-size="20" font-weight="700">no compliance overlay → our space.</text>
+
+    <!-- Force 3 -->
+    <rect x="1140" y="0" width="540" height="640" rx="16" fill="#131826" stroke="#10b981" stroke-width="2"/>
+    <text x="1180" y="80" class="brand" fill="#10b981" font-size="48">3</text>
+    <text x="1180" y="150" class="heading" fill="#ffffff" font-size="34">EU AI Act Article 12</text>
+    <text x="1180" y="200" class="body" fill="#9ca3af" font-size="22">Enforcement begins August 2026</text>
+    <text x="1180" y="270" class="body" fill="#ffffff" font-size="22">6-month minimum log retention</text>
+    <text x="1180" y="340" class="brand" fill="#ef4444" font-size="56">€35M</text>
+    <text x="1180" y="380" class="body" fill="#9ca3af" font-size="22">or 7% of turnover — whichever higher</text>
+    <text x="1180" y="450" class="body" fill="#9ca3af" font-size="22">High-risk AI systems require</text>
+    <text x="1180" y="480" class="body" fill="#9ca3af" font-size="22">tamper-evident audit trails</text>
+    <text x="1180" y="560" class="body" fill="#10b981" font-size="20" font-weight="700">Regulator-mandated infrastructure.</text>
+    <text x="1180" y="590" class="body" fill="#10b981" font-size="20" font-weight="700">Non-optional, not opt-in.</text>
+  </g>
+
+  <text x="960" y="1010" text-anchor="middle" class="body" fill="#10b981" font-size="28" font-weight="700">PROOFCHAIN sits at the intersection of all three.</text>
+</svg>

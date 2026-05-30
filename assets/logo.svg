@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920" width="1920" height="1920">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1920" fill="#0a0e1a"/>
+  <!-- 4 stacked hash-chain links (Ed25519 signature visualization) -->
+  <g transform="translate(560, 460)">
+    <!-- Block 1 -->
+    <rect x="0" y="0" width="800" height="180" rx="20" fill="#131826" stroke="#10b981" stroke-width="4"/>
+    <text x="40" y="100" class="mono" fill="#10b981" font-size="40" font-weight="700">SEQ 00</text>
+    <text x="40" y="150" class="mono" fill="#9ca3af" font-size="30">prev: 000…000</text>
+    <text x="500" y="100" class="mono" fill="#ffffff" font-size="40" font-weight="700">✓</text>
+    <!-- Connector line -->
+    <line x1="400" y1="180" x2="400" y2="220" stroke="#10b981" stroke-width="6"/>
+    <!-- Block 2 -->
+    <rect x="0" y="220" width="800" height="180" rx="20" fill="#131826" stroke="#10b981" stroke-width="4"/>
+    <text x="40" y="320" class="mono" fill="#10b981" font-size="40" font-weight="700">SEQ 01</text>
+    <text x="40" y="370" class="mono" fill="#9ca3af" font-size="30">prev: a3f7…</text>
+    <text x="500" y="320" class="mono" fill="#ffffff" font-size="40" font-weight="700">✓</text>
+    <!-- Connector -->
+    <line x1="400" y1="400" x2="400" y2="440" stroke="#10b981" stroke-width="6"/>
+    <!-- Block 3 -->
+    <rect x="0" y="440" width="800" height="180" rx="20" fill="#131826" stroke="#10b981" stroke-width="4"/>
+    <text x="40" y="540" class="mono" fill="#10b981" font-size="40" font-weight="700">SEQ 02</text>
+    <text x="40" y="590" class="mono" fill="#9ca3af" font-size="30">prev: 9eeb…</text>
+    <text x="500" y="540" class="mono" fill="#ffffff" font-size="40" font-weight="700">✓</text>
+  </g>
+  <!-- Wordmark -->
+  <text x="960" y="1280" text-anchor="middle" class="brand" fill="#ffffff" font-size="120">PROOFCHAIN</text>
+  <text x="960" y="1380" text-anchor="middle" class="body" fill="#10b981" font-size="48" font-weight="600">Cryptographic provenance for AI agents</text>
+</svg>

@@ -1,0 +1,60 @@
+# Environment
+.env
+.env.local
+.env.*.local
+*.env.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+.next/
+out/
+.vercel
+*.tsbuildinfo
+.npm
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Benchmark outputs (keep questions.json, ignore generated)
+benchmarks/results/*.json
+benchmarks/results/*.png
+!benchmarks/results/.gitkeep
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Signing keys (NEVER commit)
+proofchain_signing_key.bin
+*.pem
+*.key
+
+# Test outputs
+.coverage
+htmlcov/
+.tox/

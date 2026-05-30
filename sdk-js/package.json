@@ -1,0 +1,39 @@
+{
+  "name": "@proofchain/sdk",
+  "version": "0.1.0-alpha.1",
+  "description": "Cryptographic audit trail for AI agents on the live web. Drop-in MCP provenance layer for Bright Data.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest"
+  },
+  "keywords": [
+    "ai-agents",
+    "mcp",
+    "bright-data",
+    "web-scraping",
+    "provenance",
+    "ed25519",
+    "audit",
+    "compliance"
+  ],
+  "author": "Sardor Razikov <razikovsardor1@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SRKRZ23/proofchain.git"
+  },
+  "homepage": "https://proofchain.dev",
+  "bugs": "https://github.com/SRKRZ23/proofchain/issues",
+  "dependencies": {
+    "@noble/ed25519": "^2.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.0"
+  }
+}

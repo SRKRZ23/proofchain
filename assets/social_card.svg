@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="14" height="630" fill="#10b981"/>
+
+  <text x="60" y="140" class="brand" fill="#ffffff" font-size="72">PROOFCHAIN</text>
+  <text x="60" y="200" class="body" fill="#10b981" font-size="30" font-weight="600">Cryptographic provenance for AI agents</text>
+
+  <text x="60" y="290" class="body" fill="#9ca3af" font-size="22">Ed25519-signed evidence on every Bright Data fetch.</text>
+  <text x="60" y="320" class="body" fill="#9ca3af" font-size="22">Hash-chained. EU AI Act Article 12 compliant. MIT.</text>
+
+  <!-- KPI strip compact -->
+  <g transform="translate(60, 400)">
+    <text x="0" y="50" class="brand" fill="#10b981" font-size="64">51/51</text>
+    <text x="0" y="85" class="body" fill="#ffffff" font-size="20" font-weight="700">tests</text>
+    <text x="220" y="50" class="brand" fill="#10b981" font-size="64">10/10</text>
+    <text x="220" y="85" class="body" fill="#ffffff" font-size="20" font-weight="700">questions</text>
+    <text x="500" y="50" class="brand" fill="#10b981" font-size="64">40+</text>
+    <text x="500" y="85" class="body" fill="#ffffff" font-size="20" font-weight="700">evidence packets</text>
+  </g>
+
+  <text x="60" y="580" class="body" fill="#9ca3af" font-size="18">github.com/SRKRZ23/proofchain · Bright Data UNLOCKED Hackathon</text>
+</svg>

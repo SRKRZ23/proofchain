@@ -1,0 +1,231 @@
+[
+  {
+    "id": "q1_tsla_eu_concentration",
+    "category": "customer_concentration",
+    "track": "finance_market_intelligence",
+    "text": "What percentage of TSLA's Q1 2026 revenue came from European markets, and how does that compare to Q1 2025?",
+    "expected_sources": [
+      "10-Q filing",
+      "investor presentation",
+      "Reuters/Bloomberg"
+    ],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q2_aapl_supplier_concentration",
+    "category": "supplier_concentration",
+    "track": "finance_market_intelligence",
+    "text": "What % of AAPL's components in 2026 come from suppliers с revenue concentration >10% (single-buyer risk)?",
+    "expected_sources": ["10-K supplier list", "industry analysis"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q3_nvda_china_export",
+    "category": "geopolitical_risk",
+    "track": "finance_market_intelligence",
+    "text": "Following the October 2025 H100 export ban update, what % of NVDA Q1 2026 datacenter revenue was at-risk?",
+    "expected_sources": ["10-Q", "earnings call transcript", "BIS rule text"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q4_meta_ad_recovery",
+    "category": "competitive_intelligence",
+    "track": "gtm_intelligence",
+    "text": "Has META's Reality Labs operating loss narrowed Q1 2026 vs Q1 2025? Cite specific figures.",
+    "expected_sources": ["10-Q", "Q1 earnings PR"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q5_amzn_aws_growth",
+    "category": "segment_growth",
+    "track": "finance_market_intelligence",
+    "text": "AWS Q1 2026 YoY revenue growth rate vs Microsoft Azure Q1 2026 segment growth?",
+    "expected_sources": ["AMZN 10-Q", "MSFT 10-Q"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6_googl_search_share",
+    "category": "market_share",
+    "track": "gtm_intelligence",
+    "text": "Q1 2026 global search market share for GOOG/GOOGL vs Bing vs DuckDuckGo? Cite source.",
+    "expected_sources": ["StatCounter", "SimilarWeb", "Q1 2026 earnings"],
+    "ground_truth_url": "https://gs.statcounter.com/search-engine-market-share",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q7_msft_ai_revenue",
+    "category": "ai_revenue_attribution",
+    "track": "finance_market_intelligence",
+    "text": "MSFT specifically attributed how much Q1 2026 revenue к Copilot products? Was the figure independently verifiable?",
+    "expected_sources": ["10-Q footnote", "earnings transcript", "investor day deck"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q8_palantir_govt_growth",
+    "category": "customer_concentration",
+    "track": "finance_market_intelligence",
+    "text": "Palantir Q1 2026 government segment growth vs commercial. Which segment is higher-margin?",
+    "expected_sources": ["10-Q segment disclosure", "earnings call"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q9_apple_china_supply_chain_risk",
+    "category": "supply_chain",
+    "track": "security_compliance",
+    "text": "Recent Apple disclosures about China supply chain risk Q1 2026 — any new mitigations or sourcing diversification?",
+    "expected_sources": ["10-K risk factors", "investor letter", "press"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q10_amazon_anthropic_relationship",
+    "category": "strategic_partnership",
+    "track": "competitive_intelligence",
+    "text": "Amazon-Anthropic investment relationship as of May 2026 — total committed, revenue-attribution, board representation?",
+    "expected_sources": ["press releases", "10-K", "Anthropic disclosure"],
+    "ground_truth_url": "https://www.anthropic.com/news",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q11_aml_us_sanction_lists",
+    "category": "aml_compliance",
+    "track": "security_compliance",
+    "text": "Has any entity been added к OFAC SDN list in last 7 days that affects [crypto exchange ABC]?",
+    "expected_sources": ["OFAC SDN", "Treasury PR", "compliance feeds"],
+    "ground_truth_url": "https://sanctionssearch.ofac.treas.gov/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q12_eu_ai_act_high_risk_classification",
+    "category": "regulatory_monitoring",
+    "track": "security_compliance",
+    "text": "EU AI Act Article 6 — does [specific use case описание] qualify as 'high-risk' AI system? Cite Article reference.",
+    "expected_sources": ["EU AI Act text", "guidance docs", "expert legal"],
+    "ground_truth_url": "https://artificialintelligenceact.eu/the-act/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q13_executive_compensation_proxy",
+    "category": "executive_risk",
+    "track": "finance_market_intelligence",
+    "text": "Top 5 executive compensation Q1 2026 для [Company X] vs sector median — any red flags signal-worthy?",
+    "expected_sources": ["DEF 14A proxy", "compensation surveys"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q14_climate_disclosure_compliance",
+    "category": "regulatory_monitoring",
+    "track": "security_compliance",
+    "text": "Has [Company X] filed climate-related disclosure per SEC final rule (March 2024)? Compliance status May 2026?",
+    "expected_sources": ["10-K climate section", "voluntary disclosures"],
+    "ground_truth_url": "https://www.sec.gov/news/press-release/2024-31",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q15_korean_chaebol_governance_risk",
+    "category": "international_governance",
+    "track": "security_compliance",
+    "text": "Recent governance changes at Samsung/SK Hynix/Hyundai Q1-Q2 2026 — succession plans, controversy, board reshuffles?",
+    "expected_sources": ["Korean financial press", "DART filings", "Reuters"],
+    "ground_truth_url": "https://dart.fss.or.kr",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q16_chinese_dual_circulation_strategy",
+    "category": "geopolitical_economic",
+    "track": "gtm_intelligence",
+    "text": "Recent Chinese 'dual circulation' policy updates May 2026 — what sectors are prioritized для domestic substitution?",
+    "expected_sources": ["Xinhua", "NDRC announcements", "WSJ China analysis"],
+    "ground_truth_url": "https://en.ndrc.gov.cn/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q17_indian_data_localization_progress",
+    "category": "regulatory_monitoring",
+    "track": "security_compliance",
+    "text": "India Personal Data Protection Bill 2025 — implementation timeline Q2 2026? Any sector-specific rules emerged?",
+    "expected_sources": ["MeitY notifications", "PRS Legislative", "industry letters"],
+    "ground_truth_url": "https://meity.gov.in/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q18_pharma_ftc_consent_decree_status",
+    "category": "litigation_monitoring",
+    "track": "security_compliance",
+    "text": "Recent FTC consent decree status для [pharma company X] — compliance milestones met May 2026?",
+    "expected_sources": ["FTC press", "company SEC filings", "consent decree text"],
+    "ground_truth_url": "https://www.ftc.gov/news-events/news/press-releases",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q19_competitor_pricing_changes",
+    "category": "competitive_pricing",
+    "track": "gtm_intelligence",
+    "text": "Has [SaaS competitor X] changed pricing in last 30 days? List old/new prices с timestamps.",
+    "expected_sources": ["competitor pricing page", "Wayback Machine", "Twitter announcement"],
+    "ground_truth_url": "https://web.archive.org/",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q20_hiring_signal_competitor",
+    "category": "competitive_intelligence",
+    "track": "gtm_intelligence",
+    "text": "[Competitor X] hiring trends Q2 2026 — which functions growing, which contracting? Net headcount delta?",
+    "expected_sources": ["LinkedIn job postings", "company careers page", "Glassdoor"],
+    "ground_truth_url": "https://www.linkedin.com/jobs/",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q21_account_enrichment_btb",
+    "category": "account_enrichment",
+    "track": "gtm_intelligence",
+    "text": "Enrich account [Company X]: revenue, headcount, tech stack, recent funding, ownership structure, key signers.",
+    "expected_sources": ["Crunchbase", "LinkedIn", "SEC EDGAR", "company website"],
+    "ground_truth_url": "https://www.crunchbase.com/",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q22_buying_intent_signals",
+    "category": "buying_intent",
+    "track": "gtm_intelligence",
+    "text": "Has [Target Account X] published buying-intent signals в last 60 days (RFP, vendor-eval-blog, hiring procurement)?",
+    "expected_sources": ["company blog", "RFP databases", "G2 review activity"],
+    "ground_truth_url": "https://www.g2.com/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q23_third_party_risk_vendor",
+    "category": "vendor_risk",
+    "track": "security_compliance",
+    "text": "[Vendor X] third-party risk assessment May 2026 — recent breaches, SOC 2 status, financial health signals?",
+    "expected_sources": ["public breach databases", "SOC 2 attestation", "press"],
+    "ground_truth_url": "https://web.archive.org/web/2024/https://search.censys.io/",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q24_iso_27001_audit_status",
+    "category": "compliance_certification",
+    "track": "security_compliance",
+    "text": "Did [Company X] complete ISO 27001 audit in Q1 2026? Certification body? Findings?",
+    "expected_sources": ["press releases", "trust center pages", "auditor sites"],
+    "ground_truth_url": "https://www.iso.org/standard/iso-iec-27001",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q25_brand_data_exposure_credential_leak",
+    "category": "data_exposure",
+    "track": "security_compliance",
+    "text": "Have credentials for [domain X] appeared в credential leak databases last 30 days? Source breach?",
+    "expected_sources": ["HaveIBeenPwned", "Pastebin scrapers", "dark web monitoring"],
+    "ground_truth_url": "https://haveibeenpwned.com/",
+    "difficulty": "easy"
+  }
+]

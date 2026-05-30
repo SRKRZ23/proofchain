@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+
+  <text x="100" y="100" class="brand" fill="#ffffff" font-size="64">How it works</text>
+  <text x="100" y="150" class="body" fill="#9ca3af" font-size="28">4 named agents · 4 Bright Data products · 1 cryptographic chain</text>
+
+  <!-- Compact 4-agent row -->
+  <g transform="translate(100, 250)">
+    <rect x="0" y="0" width="420" height="240" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="210" y="70" text-anchor="middle" class="heading" fill="#ffffff" font-size="36">SEARCHER</text>
+    <text x="210" y="115" text-anchor="middle" class="body" fill="#10b981" font-size="22">Bright Data SERP API</text>
+    <text x="210" y="160" text-anchor="middle" class="body" fill="#9ca3af" font-size="20">Top-N organic results</text>
+    <text x="210" y="200" text-anchor="middle" class="mono" fill="#9ca3af" font-size="18">→ fetch_serp</text>
+
+    <rect x="440" y="0" width="420" height="240" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="650" y="70" text-anchor="middle" class="heading" fill="#ffffff" font-size="36">SCRAPER</text>
+    <text x="650" y="115" text-anchor="middle" class="body" fill="#10b981" font-size="22">Web Scraper API + Unlocker</text>
+    <text x="650" y="160" text-anchor="middle" class="body" fill="#9ca3af" font-size="20">Structured content + SHA-256</text>
+    <text x="650" y="200" text-anchor="middle" class="mono" fill="#9ca3af" font-size="18">→ fetch_scraper</text>
+
+    <rect x="880" y="0" width="420" height="240" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="1090" y="70" text-anchor="middle" class="heading" fill="#ffffff" font-size="36">VERIFIER</text>
+    <text x="1090" y="115" text-anchor="middle" class="body" fill="#10b981" font-size="22">Ed25519 + hash chain</text>
+    <text x="1090" y="160" text-anchor="middle" class="body" fill="#9ca3af" font-size="20">Cross-source conflict detect</text>
+    <text x="1090" y="200" text-anchor="middle" class="mono" fill="#9ca3af" font-size="18">→ source_conflict</text>
+
+    <rect x="1320" y="0" width="420" height="240" rx="12" fill="#131826" stroke="#10b981" stroke-width="3"/>
+    <text x="1530" y="70" text-anchor="middle" class="heading" fill="#ffffff" font-size="36">SYNTHESIZER</text>
+    <text x="1530" y="115" text-anchor="middle" class="body" fill="#10b981" font-size="22">Claude Sonnet 4.6</text>
+    <text x="1530" y="160" text-anchor="middle" class="body" fill="#9ca3af" font-size="20">Grounded answer + citations</text>
+    <text x="1530" y="200" text-anchor="middle" class="mono" fill="#9ca3af" font-size="18">→ agent_synthesis</text>
+  </g>
+
+  <!-- Below: chain visualization -->
+  <g transform="translate(100, 600)">
+    <rect x="0" y="0" width="1720" height="280" rx="16" fill="#131826" stroke="#10b981" stroke-width="4"/>
+    <text x="40" y="70" class="heading" fill="#ffffff" font-size="40">Ed25519-signed Evidence Chain</text>
+    <text x="40" y="120" class="body" fill="#10b981" font-size="24">Every packet: SHA-256 hash + prev_hash + Ed25519 signature + monotonic seq</text>
+
+    <g transform="translate(40, 160)">
+      <rect x="0" y="0" width="130" height="80" rx="8" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="65" y="36" text-anchor="middle" class="mono" fill="#10b981" font-size="24">SEQ 00</text>
+      <text x="65" y="62" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">genesis</text>
+      <line x1="130" y1="40" x2="180" y2="40" stroke="#10b981" stroke-width="3" marker-end="url(#arrow2)"/>
+      <rect x="180" y="0" width="130" height="80" rx="8" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="245" y="36" text-anchor="middle" class="mono" fill="#10b981" font-size="24">SEQ 01</text>
+      <text x="245" y="62" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">prev: a3f7…</text>
+      <line x1="310" y1="40" x2="360" y2="40" stroke="#10b981" stroke-width="3" marker-end="url(#arrow2)"/>
+      <rect x="360" y="0" width="130" height="80" rx="8" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="425" y="36" text-anchor="middle" class="mono" fill="#10b981" font-size="24">SEQ 02</text>
+      <text x="425" y="62" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">prev: 9eeb…</text>
+      <line x1="490" y1="40" x2="540" y2="40" stroke="#10b981" stroke-width="3" marker-end="url(#arrow2)"/>
+      <rect x="540" y="0" width="130" height="80" rx="8" fill="#0a0e1a" stroke="#10b981" stroke-width="2"/>
+      <text x="605" y="36" text-anchor="middle" class="mono" fill="#10b981" font-size="24">SEQ 03</text>
+      <text x="605" y="62" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">prev: 8c12…</text>
+
+      <text x="800" y="50" class="body" fill="#9ca3af" font-size="22">…N more packets, all hash-chained, all signed.</text>
+
+      <text x="800" y="100" class="body" fill="#10b981" font-size="22" font-weight="700">Tamper any byte → chain breaks downstream → public verify fails.</text>
+    </g>
+  </g>
+
+  <defs>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#10b981"/>
+    </marker>
+  </defs>
+</svg>

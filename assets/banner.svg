@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .brand { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 900; }
+      .heading { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 700; }
+      .body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#0a0e1a"/>
+  <!-- 22px left brand bar -->
+  <rect x="0" y="0" width="22" height="1080" fill="#10b981"/>
+
+  <!-- Headline block -->
+  <text x="100" y="220" class="brand" fill="#ffffff" font-size="96">PROOFCHAIN</text>
+  <text x="100" y="290" class="body" fill="#10b981" font-size="40" font-weight="600">Other AI agents claim citations. PROOFCHAIN signs every one.</text>
+
+  <!-- Subline -->
+  <text x="100" y="360" class="body" fill="#9ca3af" font-size="28">Ed25519-signed, SHA-256 hash-chained evidence for every Bright Data fetch.</text>
+  <text x="100" y="400" class="body" fill="#9ca3af" font-size="28">EU AI Act Article 12 compliant. IETF web-bot-auth aligned.</text>
+
+  <!-- KPI strip -->
+  <g transform="translate(100, 500)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="320" height="200" rx="16" fill="#131826" stroke="#1f2937" stroke-width="2"/>
+    <text x="40" y="80" class="brand" fill="#10b981" font-size="80">51/51</text>
+    <text x="40" y="130" class="body" fill="#ffffff" font-size="24" font-weight="700">tests passing</text>
+    <text x="40" y="165" class="body" fill="#9ca3af" font-size="20">Ed25519 + hash-chain verified</text>
+    <!-- KPI 2 -->
+    <rect x="350" y="0" width="320" height="200" rx="16" fill="#131826" stroke="#1f2937" stroke-width="2"/>
+    <text x="390" y="80" class="brand" fill="#10b981" font-size="80">10/10</text>
+    <text x="390" y="130" class="body" fill="#ffffff" font-size="24" font-weight="700">benchmark questions</text>
+    <text x="390" y="165" class="body" fill="#9ca3af" font-size="20">100% success rate (mock + live)</text>
+    <!-- KPI 3 -->
+    <rect x="700" y="0" width="320" height="200" rx="16" fill="#131826" stroke="#1f2937" stroke-width="2"/>
+    <text x="740" y="80" class="brand" fill="#10b981" font-size="80">4</text>
+    <text x="740" y="130" class="body" fill="#ffffff" font-size="24" font-weight="700">Bright Data products</text>
+    <text x="740" y="165" class="body" fill="#9ca3af" font-size="20">SERP · Scraper · Unlocker · Browser</text>
+    <!-- KPI 4 -->
+    <rect x="1050" y="0" width="320" height="200" rx="16" fill="#131826" stroke="#1f2937" stroke-width="2"/>
+    <text x="1090" y="80" class="brand" fill="#10b981" font-size="80">~30s</text>
+    <text x="1090" y="130" class="body" fill="#ffffff" font-size="24" font-weight="700">per question</text>
+    <text x="1090" y="165" class="body" fill="#9ca3af" font-size="20">SERP→scrape×N→synth, evidence inline</text>
+  </g>
+
+  <!-- Footer: hackathon + author -->
+  <text x="100" y="980" class="body" fill="#9ca3af" font-size="22">Bright Data Web Data UNLOCKED · Sardor Razikov · github.com/SRKRZ23/proofchain · MIT License</text>
+
+  <!-- Tech stamp top right -->
+  <g transform="translate(1620, 60)">
+    <rect x="0" y="0" width="280" height="80" rx="8" fill="#131826" stroke="#10b981" stroke-width="2"/>
+    <text x="140" y="36" text-anchor="middle" class="mono" fill="#10b981" font-size="18" font-weight="700">ED25519 · SHA-256</text>
+    <text x="140" y="62" text-anchor="middle" class="mono" fill="#9ca3af" font-size="16">RFC 8785 · IETF draft-05</text>
+  </g>
+</svg>

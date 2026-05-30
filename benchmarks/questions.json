@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q1_tsla_eu_concentration",
+    "category": "customer_concentration",
+    "text": "What percentage of TSLA's Q1 2026 revenue came from European markets, and how does that compare to Q1 2025?",
+    "expected_sources": ["10-Q filing", "investor presentation", "Reuters/Bloomberg"],
+    "ground_truth_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001318605"
+  },
+  {
+    "id": "q2_eu_semi_inventory",
+    "category": "inventory_signal",
+    "text": "Compare Q3 2025 European semiconductor inventory levels at TSMC, Infineon, and STMicroelectronics.",
+    "expected_sources": ["earnings press releases", "investor decks", "analyst reports"],
+    "ground_truth_url": "multi-source"
+  },
+  {
+    "id": "q3_nvda_dc_revenue",
+    "category": "earnings_surprise",
+    "text": "NVDA's data-center revenue Q1 2026 vs analyst consensus guidance — what's the over/under?",
+    "expected_sources": ["10-Q", "Visible Alpha consensus", "Refinitiv I/B/E/S"],
+    "ground_truth_url": "https://investor.nvidia.com/financial-info/quarterly-results/default.aspx"
+  },
+  {
+    "id": "q4_apple_services",
+    "category": "services_deceleration",
+    "text": "Apple Services growth Q1 2026 — what's the analyst consensus and what's the bear case?",
+    "expected_sources": ["10-Q segment data", "sell-side notes", "investor letters"],
+    "ground_truth_url": "https://investor.apple.com/sec-filings/default.aspx"
+  },
+  {
+    "id": "q5_msft_azure_capex",
+    "category": "capex_signal",
+    "text": "Microsoft Azure capex 2026 — which suppliers are flagging order growth vs flat orders?",
+    "expected_sources": ["Vertiv earnings", "Equinix earnings", "Eaton/Trane", "Bloomberg supply chain"],
+    "ground_truth_url": "multi-source"
+  },
+  {
+    "id": "q6_snow_job_postings",
+    "category": "alt_data_jobs",
+    "text": "What are job-posting trends at Snowflake suggesting about Q4 2026 revenue?",
+    "expected_sources": ["LinkedIn job board", "Snowflake careers page", "Levels.fyi"],
+    "ground_truth_url": "https://careers.snowflake.com/"
+  },
+  {
+    "id": "q7_eu_dma_enforcement",
+    "category": "regulatory_shock",
+    "text": "EU Digital Markets Act enforcement actions in Q2 2026 against Meta, Apple, Google — what's been disclosed?",
+    "expected_sources": ["European Commission press releases", "Reuters", "Politico EU"],
+    "ground_truth_url": "https://ec.europa.eu/commission/presscorner/home/en"
+  },
+  {
+    "id": "q8_tesla_cybertruck",
+    "category": "supply_chain_risk",
+    "text": "Tesla Cybertruck production rate Q2 2026 vs original guidance — what do tier-2 suppliers say?",
+    "expected_sources": ["Tesla investor day transcripts", "supplier earnings", "Electrek/InsideEVs"],
+    "ground_truth_url": "multi-source"
+  },
+  {
+    "id": "q9_crm_ma_signal",
+    "category": "ma_signal",
+    "text": "Salesforce acquisition rumors Q2 2026 — what filings or executive moves correlate?",
+    "expected_sources": ["Form 8-K filings", "exec LinkedIn moves", "Bloomberg M&A wire"],
+    "ground_truth_url": "https://investor.salesforce.com/sec-filings/default.aspx"
+  },
+  {
+    "id": "q10_xom_emissions",
+    "category": "esg_bear_case",
+    "text": "ExxonMobil 2026 emissions disclosure — what does the audited report say vs activist filings?",
+    "expected_sources": ["XOM sustainability report", "Carbon Tracker filings", "AS YOU SOW resolutions"],
+    "ground_truth_url": "https://corporate.exxonmobil.com/sustainability-and-reports"
+  }
+]
