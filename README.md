@@ -26,7 +26,7 @@ PROOFCHAIN runs 4 named agents in parallel:
 
 **60-second walkthrough:** see [VIDEO_SCRIPT.md](./VIDEO_SCRIPT.md)
 
-> Equity research analyst is the flagship persona. Same engine ships in AML surveillance, regulatory monitoring, publisher licensing enforcement, threat intel — see [PAINPOINT_MATRIX.md](./PAINPOINT_MATRIX.md) for full 6-persona analysis.
+> Equity research analyst is the flagship persona. Same engine ships in AML surveillance, regulatory monitoring, publisher licensing enforcement, and threat intel.
 
 ---
 
@@ -43,7 +43,7 @@ This repository is the **pre-existing open-source library** used during the Brig
 - Python SDK (`sdk-py/`) + JavaScript SDK (`sdk-js/`)
 - Supabase schema migrations
 - 10 enterprise benchmark questions (`benchmarks/`)
-- Strategy documentation suite (ARCHITECTURE, BUILD_PLAN, PITCH_DECK_OUTLINE, etc.)
+- Architecture and benchmark methodology docs
 
 **Hackathon week (May 25–30) — additive contributions on top of foundation:**
 
@@ -122,7 +122,7 @@ Anthropic publicly confessed in their [April 23, 2026 postmortem](https://www.an
 
 **Honest PROOFCHAIN value:** We don't claim we'd have caught Anthropic's bugs — they were server-side model config changes, invisible at the agent→web boundary. We DO claim that **when your model provider can't detect their own regressions for weeks, downstream operators need their own tamper-evident audit trail**. PROOFCHAIN provides exactly that, independent of what the provider logs.
 
-This is a **regulatory/compliance story**, not a "we caught the bug" story. See [HONEST_CLAIMS.md](./HONEST_CLAIMS.md) for what we claim vs what we deliberately don't.
+This is a **regulatory/compliance story**, not a "we caught the bug" story.
 
 ---
 
@@ -229,30 +229,23 @@ Flagship demo = equity research. Platform supports all five. The "model owners" 
 
 ---
 
-## Acquihire trajectory
+## Acquirer landscape
 
-Realistic acquirer landscape — see [ACQUIHIRE_PATHWAYS.md](./ACQUIHIRE_PATHWAYS.md) for concrete signals:
-
-1. **Bright Data** (3-7% near-term) — natural compliance layer for their 100M+ daily agent interactions. Their stated path to $400M ARR.
-2. **Cloudflare** (3-5%) — IETF web-bot-auth co-author Meunier. AI Labyrinth + Workers AI = adjacent fit.
-3. **AlphaSense / Bloomberg** (2-3%) — equity research vertical strategic.
-4. **Anthropic** (1-3%) — MCP provenance gap demand signal (April 2026 postmortem).
-5. **Specialized RegTech** (5-8% range) — NAVEX, Diligent, OneTrust, Saviynt. EU AI Act forcing function.
-
-Drop from earlier analysis: ~~Google~~ (standards-side via web-bot-auth + Wiz $32B covers them), ~~ARM~~ (silicon-only M&A pattern).
+1. **Bright Data** — natural compliance layer for 100M+ daily agent interactions
+2. **Cloudflare** — IETF web-bot-auth co-author Meunier + AI Labyrinth + Workers AI adjacency
+3. **AlphaSense / Bloomberg** — equity research vertical strategic
+4. **Anthropic** — MCP provenance gap demand signal (April 2026 postmortem)
+5. **Specialized RegTech** — NAVEX, Diligent, OneTrust, Saviynt; EU AI Act forcing function
 
 ---
 
 ## Post-hackathon roadmap
 
-See [POST_HACKATHON_ROADMAP.md](./POST_HACKATHON_ROADMAP.md). Key milestones:
-
-- **Week 1-2 post-submission:** Engage IETF web-bot-auth working group (post implementation feedback to draft-05 author Meunier)
+- **Week 1–2:** Engage IETF web-bot-auth working group (post implementation feedback to draft-05)
 - **Month 1:** Submit IETF I-D draft "Hash-chain extension to web-bot-auth"
-- **Month 1-2:** First design partner (hedge fund / compliance team / publisher)
-- **Month 2-3:** Bright Data AI Startup Program onboarding
-- **Month 3-6:** Cloudflare engineering engagement (via Meunier + IETF)
-- **Month 6-12:** Acquihire conversations
+- **Month 1–2:** First design partner (hedge fund / compliance team / publisher)
+- **Month 2–3:** Bright Data AI Startup Program onboarding
+- **Month 3–6:** Cloudflare engineering engagement (via Meunier + IETF)
 
 ---
 
